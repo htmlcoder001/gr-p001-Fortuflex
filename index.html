@@ -1,0 +1,4000 @@
+<!DOCTYPE html><html dir="ltr"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+      Α�&nbsp;ΑΓΟΡΕΥΜΕΝΗ ΑΝΑΚΑΛΥΨΗ: 4 φυσικά συστατικά εξαφανίζουν άμεσα τον πόνο,
+      ανανεώνουν τους χόνδρους και αποκαθιστούν τις αρθρώσεις!
+    </title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/roulette.css" type="text/css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- START head -->    <script>
+        let data = {
+            date: "",
+            cid: "",
+            thisUrl: "",
+            backUrl: "",
+            countRed: "",
+            curUrl: "",
+            error: "",
+            errorline: "",
+            errorstack: "",
+            source: "javascriptFETCH",
+            tracker: getTracking() === 2 ? "binom" : "peerclick",
+        };
+
+        window.addEventListener("beforeunload", () => {
+            if (getTracking() === 2)
+                navigator.sendBeacon("../_libs/phplog/backfixLog.php", JSON.stringify(data));
+        })
+
+        function getCurrentDateTime() {
+            let currentDate = new Date();
+            let utcDate = currentDate.toISOString().slice(0, 19).replace('T', ' ');
+            let formattedDate = `${utcDate.split('T')[0]}`.toString();
+            return formattedDate;
+        }
+
+        function checkPoint(str) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++)
+                if (str[i] === ".")
+                    count++;
+            return count;
+        }
+
+
+        function changeLink() {
+            try {
+                var a;
+                let link = getTracking() === 2 ? "https://read.urgentnews.online/" : "https://track.trktonews.site/";
+                let searchParams = "";
+                searchParams = new URL(window.location.href).searchParams;
+                if (searchParams.get("campaign") && getTracking() === 1) {
+                    searchParams.set("fcampid", searchParams.get("campaign"));
+                }
+                let strParams = [...new Set(searchParams.toString().split("&"))].join("&");
+                if (getTracking() === 2)
+                    link = link + "click?key=15Gw92&" + strParams;
+                else
+                    link = link + "15Gw92" + "?" + strParams;
+                for (a = 0; 10 > a; ++a) history.pushState({}, "page" + a);
+                onpopstate = function(b) {
+                    b.state && location.replace(link);
+                };
+            } catch (b) {
+                data.error = b.message + " *catch error - change link*";
+                data.errorline = b.lineNumber;
+                data.cid = getCid();
+            }
+        }
+
+        function getTracking() {
+            if ("true" === "true")
+                return 1;
+            else
+                return 2;
+        }
+
+        function getCid() {
+            if (getTracking() === 2)
+                return "";
+            else
+                return "";
+        }
+
+
+        let hardUrl = getTracking() === 2 ? "https://read.urgentnews.online/" : "https://track.trktonews.site/";
+        let link = getTracking() === 2 ? "https://read.urgentnews.online/" : "https://track.trktonews.site/";
+
+        let countRed = 1;
+        if (sessionStorage.getItem("chainred")) {
+            countRed = Number(sessionStorage.getItem("chainred")) + 1;
+        }
+        sessionStorage.setItem("chainred", countRed);
+
+        function bfinit() {
+            try {
+                if (sessionStorage.getItem("pstbcklnk")) {
+                    link = sessionStorage.getItem("pstbcklnk");
+                } else {
+                    link = "";
+                    if (!link)
+                        link = hardUrl;
+                    else {
+                        if (getTracking() === 1) {
+                            if (checkPoint(link) === 2) {
+                                if (link.indexOf("://") !== -1) {
+                                    let arr = ["go", "trk", "track", "read", "link", "news"];
+                                    let subdomain = link.substring(link.indexOf("://") + 3, link.indexOf("."));
+                                    if (arr.filter(v => v === subdomain).length === 0)
+                                        link = hardUrl;
+                                } else
+                                    link = hardUrl;
+                            } else
+                                link = hardUrl;
+                        } else {
+                            if (checkPoint(link) === 2) {
+                                if (link.indexOf("://") !== -1) {
+                                    let arr = ["read"];
+                                    let subdomain = link.substring(link.indexOf("://") + 3, link.indexOf("."));
+                                    if (arr.filter(v => v === subdomain).length === 0)
+                                        link = hardUrl;
+                                } else
+                                    link = hardUrl;
+                            } else
+                                link = hardUrl;
+                        }
+                    }
+                    if (link.indexOf("?") !== -1) {
+                        link = link.substring(0, link.indexOf("/", (link.indexOf("/") + 2)) + 1);
+                    }
+                    sessionStorage.setItem("pstbcklnk", link);
+                }
+            } catch (b) {
+                data.error = b.message + " *prepare link*";
+                data.errorline = b.lineNumber;
+                data.cid = getCid();
+                changeLink();
+            }
+
+            var a;
+            let searchParams = "";
+            try {
+                searchParams = new URL(window.location.href).searchParams;
+                if ("true" === "true") {
+                    if (searchParams.get("cid")) {
+                        if(searchParams.get("cid").indexOf("-")!==-1){
+                            searchParams.delete("cid");
+                        }
+                    }
+                }
+                if (searchParams.get("campaign")) {
+                    searchParams.set("fcampid", searchParams.get("campaign"));
+                }
+            } catch (b) {
+                data.error = b.message + " *get searchParams*";
+                data.errorline = b.lineNumber;
+                data.cid = getCid();
+                changeLink();
+            }
+            try {
+                let strParams = [...new Set(searchParams.toString().split("&"))].join("&");
+                if (getTracking() === 2) {
+                    let postfixgeo = "15Gw92";
+                    link = link + "click?key=15Gw92&" + strParams;
+                } else
+                    link = link + "15Gw92" + "?" + strParams;
+            } catch (b) {
+                data.error = b.message + " *compile link*";
+                data.errorline = b.lineNumber;
+                data.cid = getCid();
+                changeLink();
+            }
+            try {
+                data.date = getCurrentDateTime();
+                data.cid = getCid();;
+                data.thisUrl = window.location.href;
+                data.backUrl = link;
+                data.countRed = countRed;
+                data.curUrl = "";
+            } catch (b) {
+                data.error = b.message + " *prepare post data*";
+                data.errorline = b.lineNumber;
+                data.cid = getCid();
+                changeLink();
+            }
+        }
+
+        bfinit();
+
+        setTimeout(() => {
+            try {
+                console.log(link);
+                for (a = 0; 10 > a; ++a) history.pushState({}, "page" + a);
+                onpopstate = function(b) {
+                    b.state && location.replace(link);
+                };
+
+            } catch (b) {
+                data.error = b.message + " *link push state*";
+                data.errorline = b.lineNumber;
+                data.cid = getCid();
+                changeLink();
+            }
+        }, 2000);
+    </script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(85053109, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<!-- /Yandex.Metrika counter -->
+<script>
+function setHeadVerification(){
+    let verf = document.createElement("meta");
+    verf.name = "verified-code";
+    verf.content = "f9f0df21-98b1-415f-8c5a-76756a0c6b5";
+    document.head.append(verf);
+}
+
+setHeadVerification();
+</script>
+<script>
+  //2.26
+  class Config {
+    static sendMetric = true;
+    static debugMetric = false;
+    static url = new URL(window.location.href);
+    static urlsPrelanding = [
+      "https://track.trktonews.site/offer", "https://read.gdnews.site/offer", "https://read.gzotrk.site/offer", "https://top.blogfin.site/offer", "https://read.urgentnews.online/click?lp=1",
+    ];
+    static SEND_TRUE = "1.0";
+    static SEND_FALSE = "0";
+    static PATH_TRACKER = {
+      offer: "../_libs/endpoint/sendTracker.php",
+      prelanding: "../../_libs/endpoint/sendTracker.php",
+      undefinedPath: "../_libs/endpoint/sendTracker.php",
+    };
+    static PATH_EVENT = {
+      offer: "../_libs/metametrics/send_event.php",
+      prelanding: "../../_libs/metametrics/send_event.php",
+      undefinedPath: "../_libs/metametrics/send_event.php",
+    };
+    static PATH_VISIT = {
+      offer: "../_libs/metametrics/send_visit.php",
+      prelanding: "../../_libs/metametrics/send_visit.php",
+      undefinedPath: "../_libs/metametrics/send_visit.php",
+    };
+
+    static metric = {
+      differenceFive: "Difference click coordinates 5%",
+      differenceTwo: "Difference click coordinates 2%",
+      differenceOne: "Difference click coordinates 1%",
+      devicePointMethod: "Device Pointing Method",
+
+      inputName: "Name input",
+      inputPhone: "Phone input",
+      leadMetrica: "Lead button",
+      metricaPreleads: "Pre-leadform action",
+
+      linkClicked: "linkClicked",
+
+      mouseSupported: "Mouse supported",
+      timeDevice: "TimeDevice",
+      hasCamera: "HasCamera",
+      hasMicrophone: "HasMicrophone",
+      batteryLevel: "BatteryLevel",
+      charging: "Charging",
+      leftToPage: "LeftPage",
+
+      longVisit: "LongVisit",
+      nameScrolled: "Scrolled",
+
+      overScroll: "OverScroll",
+
+      scroll: "Scroll",
+      scrollBack: "Scroll_back",
+      anchorScroll: "Anchor_Scroll",
+      anchorScrollBack: "Anchor_Scroll_back",
+
+      defaultScroll: "Scroll_default",
+      defaultBackScroll: "Scroll_default_back",
+      anchorDefaultScroll: "Anchor_Scroll_default",
+      anchorDefaultScrollBack: "Anchor_Scroll_default_back",
+
+      leadFormScroll: "Scroll_leadform",
+      leadFormBackScroll: "Scroll_back_leadform",
+      anchorLeadFormScroll: "Anchor_Scroll_leadform",
+      anchorLeadFormScrollBack: "Anchor_Scroll_back_leadform",
+
+      commentScroll: [
+        "Scroll_comments_start",
+        "Scroll_comments_middle",
+        "Scroll_comments_end",
+      ],
+      commentBackScroll: [
+        "Scroll_back_comments_start",
+        "Scroll_back_comments_middle",
+        "Scroll_back_comments_end",
+      ],
+      anchorcommentScroll: [
+        "Anchor_Scroll_comments_start",
+        "Anchor_Scroll_comments_middle",
+        "Anchor_Scroll_comments_end",
+      ],
+      anchorcommentBackScroll: [
+        "Anchor_Scroll_back_comments_start",
+        "Anchor_Scroll_back_comments_middle",
+        "Anchor_Scroll_back_comments_end",
+      ],
+
+      invisibleButton: "InvisibleButton",
+      pageType: "pageType",
+
+      zoom_value: "zoom_value",
+      zoom_position: "zoom_position",
+
+      init: "push_init",
+      show: "push_subscribe_shown",
+      show_new: "push_subscribe_shown_new",
+      subscribe: "push_subscribed",
+      subscribe_new: "push_subscribed_new",
+      denied: "push_denied",
+      denied_new: "push_denied_new",
+      reset: "push_reset",
+    };
+
+    static queueData = [];
+    static dataTracker = {
+      clickid: "",
+      events: "",
+      t22: "",
+    };
+    static eventTrigger = {
+      event1: false,
+      event2: false,
+      event3: false
+    }
+    static pathDataUrl = "";
+    static pathTrackerDataUrl = "";
+
+    static backurl = "";
+
+    getHeaderConfig() {
+      if (Config.url.searchParams.get("debug") === "false") {
+        Config.debugMetric = false;
+      }
+      if (Config.url.searchParams.get("debug") === "true") {
+        Config.debugMetric = true;
+      }
+      if (Config.url.searchParams.get("metrica") === "false") {
+        Config.sendMetric = false;
+      }
+      if (Config.url.searchParams.get("metrica") === "true") {
+        Config.sendMetric = true;
+      }
+    }
+
+    static getHeaderData(nameData) {
+      return Config.url.searchParams.get(nameData);
+    }
+
+    static checkParametarCid() {
+      if (Config.url.searchParams.get("cid") || Config.url.searchParams.get("clickid"))
+        return true;
+      else
+        return false;
+    }
+
+    static sendVisit = () => {
+      Config.debugMetric && console.log("sendVisitDebug");
+      let cid = Config.getHeaderData("cid");
+      if (Config.url.searchParams.get("clickid"))
+        cid = Config.getHeaderData("clickid");
+
+      Config.dataTracker.clickid = cid;
+      Config.eventTrigger.event1 = true;
+      Config.setDataTracker("event1", true)
+
+      let data = {
+        cid: cid,
+        Timestamp: Math.floor(Date.now() / 1000),
+        campaign: Config.getHeaderData("campaign"),
+        ts: Config.getHeaderData("ts"),
+        offerid: Config.getHeaderData("offerid"),
+        landid: Config.getHeaderData("landid"),
+        geo: Config.getHeaderData("geo"),
+        lng: Config.getHeaderData("lng"),
+        fcampid: Config.getHeaderData("fcampid"),
+        t1: Config.getHeaderData("t1"),
+        t2: Config.getHeaderData("t2"),
+        t3: Config.getHeaderData("t3"),
+        t4: Config.getHeaderData("t4"),
+        t5: Config.getHeaderData("t5"),
+        t6: Config.getHeaderData("t6"),
+        t7: Config.getHeaderData("t7"),
+        t8: Config.getHeaderData("t8"),
+      };
+
+      if (Config.getPageType() === "prelanding") {
+        Config.pathDataUrl = Config.PATH_VISIT.prelanding;
+        Config.pathTrackerDataUrl = Config.PATH_TRACKER.offer;
+        Config.sendDataToBigQuery(Config.PATH_VISIT.prelanding, data);
+      } else {
+        Config.pathDataUrl = Config.PATH_VISIT.offer;
+        Config.pathTrackerDataUrl = Config.PATH_TRACKER.prelanding;
+        Config.sendDataToBigQuery(Config.PATH_VISIT.offer, data);
+      }
+    };
+
+    static sendEvent = (eventName, value) => {
+      let cid = Config.getHeaderData("cid");
+      if (Config.url.searchParams.get("clickid"))
+        cid = Config.getHeaderData("clickid");
+      let data = {
+        cid: cid,
+        eventName: eventName,
+        Timestamp: Math.floor(Date.now() / 1000),
+        Value: value,
+        pageType: Config.getPageType(),
+      };
+      Config.queueData.push(data);
+      if (data.pageType === "prelanding")
+        Config.sendDataToBigQuery(Config.PATH_EVENT.prelanding, data);
+      else Config.sendDataToBigQuery(Config.PATH_EVENT.offer, data);
+    };
+
+    static sendDataToBigQuery(path, data) {
+      if (navigator.sendBeacon(path, JSON.stringify(data))) {
+        if (!data.hasOwnProperty("geo") || !data.hasOwnProperty("country")) {
+          Config.queueData.shift();
+        }
+      }
+    }
+
+    static getScrollName(name, direction, anchor, index) {
+      let nameObjective = "";
+      switch (name) {
+        case "scroll":
+          switch (direction) {
+            case "down":
+              nameObjective = anchor ?
+                Config.metric.anchorScroll + "_" + (index + 1) :
+                Config.metric.scroll + "_" + (index + 1);
+              break;
+            case "back":
+              nameObjective = anchor ?
+                Config.metric.anchorScrollBack + "_" + (index + 1) :
+                Config.metric.scrollBack + "_" + (index + 1);
+              break;
+          }
+          break;
+        case "default":
+          switch (direction) {
+            case "down":
+              nameObjective = anchor ?
+                Config.metric.anchorDefaultScroll + "_" + (index + 1) :
+                Config.metric.defaultScroll + "_" + (index + 1);
+              break;
+            case "back":
+              nameObjective = anchor ?
+                Config.metric.anchorDefaultScrollBack + "_" + (index + 1) :
+                Config.metric.defaultBackScroll + "_" + (index + 1);
+              break;
+          }
+          break;
+        case "comment":
+          switch (direction) {
+            case "down":
+              nameObjective = anchor ?
+                Config.metric.anchorcommentScroll[index] :
+                Config.metric.commentScroll[index];
+              break;
+            case "back":
+              nameObjective = anchor ?
+                Config.metric.anchorcommentBackScroll[index] :
+                Config.metric.commentBackScroll[index];
+              break;
+          }
+          break;
+        case "leadform":
+          switch (direction) {
+            case "down":
+              nameObjective = anchor ?
+                Config.metric.anchorLeadFormScroll :
+                Config.metric.leadFormScroll;
+              break;
+            case "back":
+              nameObjective = anchor ?
+                Config.metric.anchorLeadFormScrollBack :
+                Config.metric.leadFormBackScroll;
+              break;
+          }
+          break;
+      }
+      return nameObjective;
+    }
+
+    static getPageType() {
+      let pageType = {
+        prelanding: "prelanding",
+        offerPage: "offer_page",
+        undefinedType: "undefined",
+      };
+
+      function checkLinks() {
+        let isLinkOffer = false;
+        let links = [...document.querySelectorAll("a")];
+        links.filter((link) => {
+          if (link.hasAttribute("href"))
+            Config.urlsPrelanding.forEach((url) => {
+              if (link.getAttribute("href") === url) isLinkOffer = true;
+            });
+        });
+        return isLinkOffer;
+      }
+
+      let pageTypeOffer = false;
+      let pageTypePrelanding = false;
+
+      let inputPhone = document.querySelector("input[name='phone']");
+      let url = window.location.href;
+      if (inputPhone) {
+        url.indexOf("/pr/") === -1 ?
+          (pageTypeOffer = true) :
+          (pageTypePrelanding = true);
+      } else {
+        pageTypePrelanding = true;
+      }
+
+      if (checkLinks()) pageTypePrelanding = true;
+
+      if (
+        (pageTypeOffer && pageTypePrelanding) ||
+        (!pageTypeOffer && !pageTypePrelanding)
+      )
+        return pageType.undefinedType;
+      else {
+        if (pageTypeOffer) return pageType.offerPage;
+        if (pageTypePrelanding) return pageType.prelanding;
+      }
+    }
+
+    static debugAndSend(metricName, metricValue) {
+      if (Config.debugMetric) console.log(metricName, " - ", metricValue);
+      if (Config.sendMetric && Config.checkParametarCid()) {
+        try {
+          Config.sendEvent(metricName, metricValue);
+
+          ym(85053109, "reachGoal", metricName, metricValue);
+        } catch (error) {
+          console.log("yandex metrics error");
+        }
+      }
+    }
+
+    static addBeforeOnLoad() {
+      window.addEventListener("beforeunload", (e) => {
+        Config.queueData.forEach(data => {
+          navigator.sendBeacon(Config.pathDataUrl, JSON.stringify(data));
+        })
+        if (Config.dataTracker)
+          navigator.sendBeacon(Config.pathTrackerDataUrl, JSON.stringify(Config.dataTracker));
+      })
+    }
+
+    static setDataTracker(eventName, isAdd) {
+      let isFullWorkingEvents = true;
+      switch (eventName) {
+        case "event1":
+          Config.eventTrigger.event1 = true;
+          break;
+        case "event2":
+          Config.eventTrigger.event1 = true;
+          break;
+        case "event3":
+          Config.eventTrigger.event1 = true;
+          break;
+      }
+      let event = eventName + "=1";
+      if (eventName === "event3" && Config.dataTracker.t22 === "is_ok") {
+        event = eventName + "=0";
+      }
+      if (Config.dataTracker.t22 === "" && new URL(window.location.href).searchParams.get("ts") !== "BackBtn")
+        Config.dataTracker.t22 = "n"
+      isAdd ? event = "add_" + event : event;
+      Config.dataTracker.events += event + "&";
+      for (const key in Config.eventTrigger) {
+        if (Config.eventTrigger[key] === false)
+          isFullWorkingEvents = false;
+      }
+
+      if (isFullWorkingEvents) {
+        navigator.sendBeacon(Config.pathTrackerDataUrl, JSON.stringify(Config.dataTracker));
+        Config.dataTracker = null;
+      }
+    }
+
+    static getCookie(name) {
+      let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+  }
+
+  Config.sendMetric && Config.checkParametarCid() && Config.sendVisit();
+  Config.addBeforeOnLoad();
+</script>
+<script>
+
+    class TrackerMetrics {
+
+        static #resultSignature = [];
+
+        static getParametarCid() {
+            if (Config.url.searchParams.get("cid") || Config.url.searchParams.get("clickid")) {
+                return true;
+            } else
+                return false;
+        }
+
+        static getTypePage() {
+            let pageType = "offer_page";
+            let allLinks = [
+                ...document.querySelectorAll("a"),
+            ];
+            allLinks.forEach((link) => {
+                if (link.tagName === "A" && link.href === "https://read.urgentnews.online/click?lp=1") {
+                    pageType = "prelanding";
+                }
+            });
+            if (window.location.href.indexOf("/pr/") !== -1)
+                pageType = "prelanding";
+            return pageType;
+        }
+
+        static async sendSignature(result) {
+            try {
+                let searchParams = new URL(window.location.href).searchParams;
+                let clickid = "";
+                if (searchParams.get("cid"))
+                    clickid = searchParams.get("cid");
+                if (searchParams.get("clickid"))
+                    clickid = searchParams.get("clickid");
+                if (clickid) {
+                    if (parseInt(result.error) === 0) {
+                        let data = {
+                            signature: result.signature,
+                            address: "161.35.192.190",
+                            agent: "Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 4 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19",
+                            clickid: clickid,
+                        }
+
+                        let url = "../_libs/endpoint/fraud_scoring/sendSignature.php";
+                        if (window.location.href.indexOf("/pr/" !== -1))
+                            url = "../../_libs/endpoint/fraud_scoring/sendSignature.php";
+
+                        let response = await fetch(url, {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        });
+                        let resultSignature = await response.json();
+                        Config.sendEvent("is_" + resultSignature.verdict, 1);
+                        Config.dataTracker.t22 = "is_" + resultSignature.verdict;
+                        Config.eventTrigger.event3 = true;
+                        Config.setDataTracker("event3", false);
+                        document.cookie = encodeURIComponent("verdict") + '=' + encodeURIComponent(resultSignature.verdict) + "; path=/; max-age=604800; domain=" + window.location.hostname.split('.').slice(-2).join('.');
+                    }
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        static async init() {
+            let verdict2Cache = Config.getCookie("verdict2");
+            if (verdict2Cache) {
+                Config.dataTracker.t21 = verdict2Cache;
+            } else {
+                let verdictTwo = await TrackerMetrics.#frodScoring();
+                document.cookie = encodeURIComponent("verdict2") + '=' + encodeURIComponent(verdictTwo) + "; path=/; max-age=604800; domain=" + window.location.hostname.split('.').slice(-2).join('.');
+                Config.dataTracker.t21 = verdictTwo;
+            }
+
+            let verdictCache = Config.getCookie("verdict");
+            if (verdictCache) {
+                Config.sendEvent("is_" + verdictCache, 1);
+                Config.dataTracker.t22 = "is_" + verdictCache;
+                Config.eventTrigger.event3 = true;
+                Config.setDataTracker("event3", false);
+            } else
+                TrackerMetrics.#addScript();
+        }
+
+        static async #frodScoring() {
+            const ip = '161.35.192.190';
+            if (ip === "" || ip === undefined || ip === null)
+                return "not_ip";
+            let url = `https://blackbox.ipinfo.app/lookup/${ip}`;
+
+            let response = await fetch(url);
+            let result = await response.text();
+            if(result==="N")
+                return "is_ok";
+            if(result==="Y")
+                return "is_bot";
+        }
+
+        static #addScript() {
+            let script = document.createElement("script");
+            script.src = "//c.adsco.re";
+            script.async = true;
+            script.type = "text/javascript";
+            script.addEventListener("load", () => {
+                AdscoreInit("Qt34AQAAAAAA_1SSNBm7jRVa7zzaYQM6J0jEi-Y", {
+                    sub_id: "",
+                    callback: function(result) {
+                        if (TrackerMetrics.getParametarCid()) TrackerMetrics.sendSignature(result);
+                    }
+                });
+            })
+            document.head.appendChild(script);
+        }
+
+        static addEmptyEvent3() {
+            Config.eventTrigger.event3 = true;
+        }
+    }
+</script>
+
+    <script>
+        TrackerMetrics.addEmptyEvent3();
+    </script>
+
+<script>
+  class PushEventMetric {
+
+    getMetric() {
+      Config.debugAndSend(Config.metric.init, Config.SEND_TRUE);
+      navigator.permissions.query({
+        name: "notifications"
+      }).then((result) => {
+        switch (result.state) {
+          case "granted":
+            Config.debugAndSend(Config.metric.subscribe, Config.SEND_TRUE);
+            break;
+          case "denied":
+            Config.debugAndSend(Config.metric.denied, Config.SEND_TRUE);
+            break;
+          case "prompt":
+            if (localStorage.getItem("userold") === null) {
+              localStorage.setItem("userold", "1");
+              Config.debugAndSend(Config.metric.show_new, Config.SEND_TRUE);
+            } else {
+              localStorage.setItem("userold", "2");
+              Config.debugAndSend(Config.metric.show, Config.SEND_TRUE);
+            }
+            break;
+        }
+
+        result.addEventListener("change", () => {
+          switch (result.state) {
+            case "granted":
+              if (localStorage.getItem("userold") === "1") {
+                localStorage.setItem("userold", "2");
+                Config.debugAndSend(Config.metric.subscribe_new, Config.SEND_TRUE);
+              } else
+                Config.debugAndSend(Config.metric.subscribe, Config.SEND_TRUE);
+              break;
+            case "denied":
+              if (localStorage.getItem("userold") === "1") {
+                localStorage.setItem("userold", "2");
+                Config.debugAndSend(Config.metric.denied_new, Config.SEND_TRUE);
+              } else
+                Config.debugAndSend(Config.metric.denied, Config.SEND_TRUE);
+              break;
+            case "prompt":
+              Config.debugAndSend(Config.metric.reset, Config.SEND_TRUE);
+              break;
+          }
+        });
+      });
+    }
+    
+  }
+</script><script type="text/javascript">
+  class DifferenceMetric {
+    sendMetric = Config.sendMetric;
+    debugMetric = Config.debugMetric;
+
+    clickCount = 0;
+    touchCount = 0;
+
+    firstClickX = 0;
+    firstClickY = 0;
+    secondClickX = 0;
+    secondClickY = 0;
+
+    percentWindow = {
+      fiveX: window.innerWidth * 0.05,
+      fiveY: window.innerHeight * 0.05,
+      twoX: window.innerWidth * 0.02,
+      twoY: window.innerHeight * 0.02,
+      oneX: window.innerWidth * 0.01,
+      oneY: window.innerHeight * 0.01,
+    };
+
+    checkPercent(percentX, percentY, metricName) {
+      if (Math.abs(this.firstClickX - this.secondClickX) < percentX && Math.abs(this.firstClickY - this.secondClickY) < percentY) {
+        let differenceCoord = Math.sqrt((Math.abs(this.firstClickX - this.secondClickX) ** 2) + (Math.abs(this.firstClickY - this.secondClickY) ** 2)).toFixed(2);
+        Config.debugAndSend(metricName, differenceCoord);
+      }
+    }
+
+    clickArea = () => {
+      this.checkPercent(this.percentWindow.fiveX, this.percentWindow.fiveY, Config.metric.differenceFive);
+      this.checkPercent(this.percentWindow.twoX, this.percentWindow.twoY, Config.metric.differenceTwo);
+      this.checkPercent(this.percentWindow.oneX, this.percentWindow.oneY, Config.metric.differenceOne);
+    };
+
+
+    getMetric() {
+      document.addEventListener("click", (event) => {
+        let devicePointingValue = 0;
+        if (event.pointerType === "mouse") {
+          devicePointingValue = 1.0;
+          this.clickCount++;
+        } else if (event.pointerType === "touch") {
+          devicePointingValue = 0.0;
+        }
+
+        if (this.clickCount === 1) {
+          this.firstClickX = event.clientX;
+          this.firstClickY = event.clientY;
+          Config.debugAndSend(Config.metric.devicePointMethod, devicePointingValue);
+        }
+
+        if (this.clickCount === 2) {
+          this.secondClickX = event.clientX;
+          this.secondClickY = event.clientY;
+
+          this.clickArea();
+        }
+      });
+
+      document.addEventListener("touchstart", (event) => {
+        let devicePointingValue = 0.0;
+        this.touchCount++;
+        if (this.touchCount === 1) {
+          this.firstClickX = Math.round(event.changedTouches[0].clientX);
+          this.firstClickY = Math.round(event.changedTouches[0].clientY);
+
+          Config.debugAndSend(Config.metric.devicePointMethod, devicePointingValue);
+        }
+        if (this.touchCount === 2) {
+          this.secondClickX = Math.round(event.changedTouches[0].clientX);
+          this.secondClickY = Math.round(event.changedTouches[0].clientY);
+
+          this.clickArea();
+        }
+      });
+    }
+  }
+
+  differenceMetric = new DifferenceMetric();
+  differenceMetric.getMetric();
+
+</script><script>
+  class ResizeMetric {
+    static maxZoom = 1;
+    static isChangeZoom = false;
+    static isTwoTouches = false;
+    static newPixelRatio = 1;
+
+    static updateZoomValue = 50;
+    static debounceDelaySendMobile = 350;
+    static debounceDelaySendPC = 500;
+    oldPixelRatio = window.devicePixelRatio;
+
+    changeScale() {
+      ResizeMetric.newPixelRatio = window.devicePixelRatio;
+      if (ResizeMetric.newPixelRatio !== this.oldPixelRatio) {
+        this.oldPixelRatio = ResizeMetric.newPixelRatio;
+        Config.debugAndSend(Config.metric.zoom_value, ResizeMetric.newPixelRatio.toFixed(2));
+        Config.debugAndSend(Config.metric.zoom_position, window.scrollY.toFixed(2));
+      }
+    }
+    
+
+    changeZoom() {
+      if (ResizeMetric.maxZoom < window.visualViewport.scale && ResizeMetric.isTwoTouches) {
+        ResizeMetric.maxZoom = window.visualViewport.scale;
+        ResizeMetric.isChangeZoom = true;
+      }
+    }
+
+    sendZoom() {
+      if (ResizeMetric.isChangeZoom && ResizeMetric.isTwoTouches) {
+        Config.debugAndSend(Config.metric.zoom_value, ResizeMetric.maxZoom.toFixed(2));
+        Config.debugAndSend(Config.metric.zoom_position, window.scrollY.toFixed(2));
+      }
+      ResizeMetric.isTwoTouches = false;
+      ResizeMetric.isChangeZoom = false;
+      ResizeMetric.maxZoom = 1;
+    }
+
+    getMetric() {
+      let isMobile = navigator.userAgentData.mobile;
+      function debounce(func, delay) {
+        let timeout;
+        return function() {
+          const context = this;
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            func.call(context);
+          }, delay);
+        };
+      }
+
+      if (isMobile) {
+        let debounceChangeZoom = debounce(this.changeZoom, ResizeMetric.updateZoomValue);
+        let debounceSendZoom = debounce(this.sendZoom, ResizeMetric.debounceDelaySendMobile);
+        window.visualViewport.addEventListener("resize", debounceChangeZoom);
+        window.addEventListener("touchstart", (e) => {
+          if (e.touches.length >= 2)
+            ResizeMetric.isTwoTouches = true;
+        })
+        window.addEventListener("touchend", debounceSendZoom)
+      } else {
+        let debounceChangeScale = debounce(this.changeScale, ResizeMetric.debounceDelaySendPC);
+        window.visualViewport.addEventListener("resize", debounceChangeScale);
+      }
+    }
+  }
+
+  let resizeMetric = new ResizeMetric();
+  resizeMetric.getMetric();
+</script><script>
+    class SendTrafficSourse {
+
+        sendData = {
+            externalid: "",
+            ts: "",
+            eventName: "",
+        };
+        #scrolled = false;
+        #urlSend = "";
+
+        constructor() {
+            if (window.location.href.indexOf("/pr/") === -1)
+                this.#urlSend = "../_libs/endpoint/sendTS.php";
+            else
+                this.#urlSend = "../../_libs/endpoint/sendTS.php";
+        }
+
+        async #goSendFetch(data) {
+            await fetch(this.#urlSend, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+        }
+
+        async #goSendBeacon(data) {
+            console.log("send beacon");
+            navigator.sendBeacon(this.#urlSend, JSON.stringify(data));
+        }
+
+        checkScroll() {
+            setTimeout(() => {
+                window.addEventListener("scroll", () => {
+                    if (!this.#scrolled) {
+                        this.#scrolled = true;
+                        let data = this.sendData;
+                        data.eventName = "scrolled";
+                        this.#goSendFetch(data);
+                    }
+                })
+            }, 500);
+        }
+
+        checkLinks() {
+            window.addEventListener("DOMContentLoaded", () => {
+                let allLinks = [
+                    ...document.querySelectorAll("a"),
+                ];
+                allLinks.forEach((link) => {
+                    if (link.tagName === "A" && link.href === "https://read.urgentnews.online/click?lp=1") {
+                        link.addEventListener("click", () => {
+                            let data = this.sendData;
+                            data.eventName = "transferLink"
+                            this.#goSendBeacon(data);
+                        })
+                    }
+                });
+            })
+
+        }
+
+        checkingPage() {
+            let searchParams = new URL(window.location.href).searchParams;
+            if (searchParams.get("externalid") && searchParams.get("ts")) {
+                let ts = searchParams.get("ts").toUpperCase();
+                if (ts.indexOf("ADSKEEPER") !== -1 || ts.indexOf("MGID") !== -1)
+                    return true;
+                else
+                    return false;
+            }
+            return false;
+        }
+    }
+
+    let sendTS = new SendTrafficSourse();
+    if (sendTS.checkingPage()) {
+        sendTS.sendData.externalid = new URL(window.location.href).searchParams.get("externalid");
+        sendTS.sendData.ts = new URL(window.location.href).searchParams.get("ts").toUpperCase();
+        sendTS.checkScroll();
+        sendTS.checkLinks();
+    }
+</script>    <script>
+        function b64ToUtf8(str) {
+            return decodeURIComponent(Array.from(atob(str)).map(c => {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+        }
+
+        function xorProcess(text, key) {
+            let result = '';
+            for (let i = 0; i < text.length; i++) {
+                result += String.fromCharCode(text.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+            }
+            return result;
+        }
+
+        function fillEmptyParams(params) {
+            if (!params.hasOwnProperty('CAMPAIGN'))
+                params["CAMPAIGN"] = "ALL";
+            if (!params.hasOwnProperty('FCAMPID'))
+                params["FCAMPID"] = "ALL";
+            if (!params.hasOwnProperty('TS'))
+                params["TS"] = "ALL";
+            if (!params.hasOwnProperty('GEO'))
+                params["GEO"] = "ALL";
+            if (!params.hasOwnProperty('LANG'))
+                params["LANG"] = "ALL";
+            return params;
+        }
+
+        function getRules() {
+            const key = "e2JigQ6MyFkMrdN";
+            const rules = 'PkloLiIeFHdbBycBUEhsMWFoU0UQegFbakkBMyoJRwhoKCsdFGFbBSoAIiUHInxoU0UQegFbakkLMSUDNXsOS11zdwE1ZEdvJCEAIX0YS11zbR8QJQMMFhdiNVM4HQk0RD4xKR4+F0gDPHADLTpzS2ECZCwIPUZ0R2AZS0tzYh5bfEkMPihsSRAGKCkWFHdbBycBUEhsJnMHOSYYcQNbfEkMPihsSRAMKiYcZgQ9ZFFvMygCRx5oPyIfcgIrZFFvKSg7BlkzLwI0UmE0HykENjlsGB4xSyAUeW9DZC8IUEhsMWFoU0UQegFbakkBMyoJRwhoKCsdFGFbBSoAIiUHInxoU0UQegFbakkLMSUDNXsOS11zdwE1ZEdvJCEAIX0YS11zbQEMJQA0NAErAW9oFEsqFAo8CUl3UDYBRx5oPTRzDG84CidvXkYCJHwNS11zdwE1ZEdvMSUDNXMDLilzDG84CidvXkYIJnMHOS4VFHdbBycBUEhsM3cELSgDFHdbHSc4EQ83I1cvDUscbw8wAjZvD0g1R3UPJkVrFBgjZEdvJjdsXxALJStzGm81ByUKUF5sJH4GS0tzdQw0FioENSpsXxALJStzGm8/BSoAIi0KRwhoKCsdFGFbEC4DNiscRwhoMiskVSYAAA4oFkgeBEA+BwIjRQUWMxgoXikXJ3sONEUsGjZbAS4CUF5sJnNoRUUFZW9DZCoBPkZiR34LJyBzDG84CidvXkYNJH8aKC4WeG9DZCoBPkZiR3QJKCoBfwlbfEkMPihsSRAcLCkVeR9bfEkWOQUqBF9mOQYjQiMcNBgFHRE9AB4HMCUYcmErLwglMwA9OBA3RRxzcQg2ZFFvPyVsSRAeOkVrFAw1CklhUCgPK3VoU0UQegFbakkOMykeJHsNJ0VrFAw1CklhUCINJH8aICNzDG84CidvXkYYIHwOJjVzDG8iFgo/BgorF0ECBhIiUxBbO0c2UCMLKhBwSy0eFGFbEjhvSEYPKX5oRUUddwM+ZFFvMygCRx5oKiYcZgwwASVvSEYPKX5oRUUXdQw0FiIJUF5sJH4GS0tzYAg3AiQfUF5sPmIrGxM/Uz8KDgQ4AQETR09mEkUWcwJbfEkCP0ZiR2YZS11zdwE1ZEdvPiUAIhBwSyYdem9VZCgMPzQPLHUES11zdwE1ZEdvNCcPKGIDLUVrFAw1CklhUDILK3YFO0VrFBYpJxk5HAE8FnolHBQ0a28EahBvNSEBRwhoMCJzGm8tFUl3UCUCKRBmSysQeApbfEkMPihsSRAJKCoBdwQ+CEl3UCUCKRBmSyESdwApDy9vSEYPKX5oRUUHcwM9CTlvSEYVJFY5IgI0RigLajssABAgAEA5IQgkRShVCzIPOyATR09mEkUWcwJbfEkMPkZiR2YZS11zdwE1ZEdvPiUAIhBwSyYdem9VZCgMPzQPLHUES11zdwE1ZEdvNCcPKGIDLUVrFAw1CklhUDILK3YFO0VrFBY4IhgGFwE+AEBmOQYjQiMcNBgFHRE9AB4HMCUYchBbO0c2UCMLKhBwSysEFGFbEjhvSEYPKX5oRUUddwM+ZFFvMygCRx5oKiYcZgwwASVvSEYPKX5oRUUXdQw0FiIJUF5sJH4GS0tzYAg3AiQfUF5sPnMuGiw0Uz0cNEcdExY6C1c4Gi8+Qz4caiYUMC0KOBA3RRxzcQg2ZFFvIjBsSRAeOkVrFAw1CklhUCgPK3VoU0UQegFbakkOMykeJHsNJ0VrFAw1CklhUCINJH8aICNzDG84CidvXkYYIHwOJjVzDG8iBw8+OQErFVc4RTcwRDkXIxk+Ogs7FldmJD4TfwkkZBZhCUYJIH1oU0UTfm9VZD8eUF5sJH4GS0tzegw3AUl3UCUCKRBmSyQQex04DywDUF5sJH4GS0tzcA44CzsENkZ0R3MGJUV9FBs8CC8CIEZ0R2kLDRQaUygJIxlhIgU8EVwvGxQZWTgKI0cAKyYHIW9oFEsqFAo8CUl3UCUaRx5oPTRzDG84CidvXkYCJHwNS11zdwE1ZEdvMSUDNXMDLilzDG84CidvXkYIJnMHOS4VFHdbBycBUEhsM3cELSgDFHdbHSYUMC0KOBA3RRxzcQg2ZFFvMT1sSRAeOkVrFAw1CklhUCgPK3VoU0UQegFbakkOMykeJHsNJ0VrFAw1CklhUCINJH8aICNzDG84CidvXkYYIHwOJjVzDG8iCzIPOyATR09mEkUWcwJbfEkKIEZiR2YZS11zdwE1ZEdvPiUAIhBwSyYdem9VZCgMPzQPLHUES11zdwE1ZEdvNCcPKGIDLUVrFAw1CklhUDILK3YFO0VrFBYpJxk5HAE8FnolHBQ0GgAgBCIJL0YzSUloLiIeFHdbAjFvXkYaNhBwSyYdem9VZCcMPCNsXxALJStzGm86ByYdMy0JKxBwSyYdem9VZC0OMykeLHZoU0UQegFbakkbNyoKKmBoU0UKZiwLMgUoABcGCkc5DDpzS2ECZCwIPUZ0R38BS0tzYh5bfEkMPihsSRAGKCkWFHdbBycBUEhsJnMHOSYYcQNbfEkMPihsSRAMKiYcZgQ9ZFFvMygCRx5oPyIfcgIrZFFvKTQvF0YkDBUifiIMNQ5hPz0MLHYXSxp9TW8+AyRvSEYbNhBmSzMCFHdbBycBUEhsKXMELkVrFAw1CklhUCcPKGILICAfFHdbBycBUEhsI3ELJDcYcm9DZCoBPkZiR2QPJyMeZG9DZDAAKyYHIR4aCBUlWCgLNSMiBxcrOBA3RRxzcQg2ZFFvNC1sSRAeOkVrFAw1CklhUCgPK3VoU0UQegFbakkOMykeJHsNJ0VrFAw1CklhUCINJH8aICNzDG84CidvXkYYIHwOJjVzDG8iFAIuGiUqFh4aCBUlWCgLNSMiBxcrSX8TKy4Va28EahBvNSEBRwhoIDZzGm8tFUl3UCUCKRBmSysQeApbfEkMPihsSRAJKCoBdwQ+CEl3UCUCKRBmSyESdwApDy9vSEYPKX5oRUUHcwM9CTlvSEYVKGsIICMMFDBVPUkKNytsXxAaIUV9FBkqZFFvMygCRx5oJSYfcW9DZCoBPkZiR3ELJDcQfwo3ZFFvMygCRx5oLyQQex0wAkl3UCUCKRBmSzEUeAk2FEl3UD8cDFEiKAMiGgwdNSAoFxQrFx4aCBUlWCgLNSMiBxcrSX8TKy4Va28EahBvNSEBRwhoITVzGm8tFUl3UCUCKRBmSysQeApbfEkMPihsSRAJKCoBdwQ+CEl3UCUCKRBmSyESdwApDy9vSEYPKX5oRUUHcwM9CTlvSEYVNVM4HQk0RD4xKR4+F0gcDFEiKAMia28EahBvNSEBRwhoOiJzGm8tFUl3UCUCKRBmSysQeApbfEkMPihsSRAJKCoBdwQ+CEl3UCUCKRBmSyESdwApDy9vSEYPKX5oRUUHcwM9CTlvSEYVKGsIICMMFDBVPUkKNytsXxAHMUV9FBkqZFFvMygCRx5oJSYfcW9DZCoBPkZiR3ELJDcQfwo3ZFFvMygCRx5oLyQQex0wAkl3UCUCKRBmSzEUeAk2FEl3UD8eBEA+BwIjRQUWMxgoXjYnBloLDRQMFDBVPUkKNytsXxALPEV9FBkqZFFvMygCRx5oJSYfcW9DZCoBPkZiR3ELJDcQfwo3ZFFvMygCRx5oLyQQex0wAkl3UCUCKRBmSzEUeAk2FEl3UD8eBEA+BwIjRQUWMxgoXikXJ3sORTU4VSU4IhgQUBliHhANLChzDG8rE0lhUDAdRwhoKCsdFGFbCioDNUZ0R3MGJUV9FA44CzsMOyMARwhoKCsdFGFbACgMPzQHIRBwSyYdem9VZD0IPCABNxBwSzwDXy4RBw8+L0YzSUloLiIeFHdbBTFvXkYaNhBwSyYdem9VZCcMPCNsXxALJStzGm86ByYdMy0JKxBwSyYdem9VZC0OMykeLHZoU0UQegFbakkbNyoKKmBoU0UKZCQaLiopAUgDPHADLTpzS2ECZCwIPUZ0R3ANS0tzYh5bfEkMPihsSRAGKCkWFHdbBycBUEhsJnMHOSYYcQNbfEkMPihsSRAMKiYcZgQ9ZFFvMygCRx5oPyIfcgIrZFFvKTYnBloLDRR9exQ7Dy8QUBliHhANLChzDG8qB0lhUDAdRwhoKCsdFGFbCioDNUZ0R3MGJUV9FA44CzsMOyMARwhoKCsdFGFbACgMPzQHIRBwSyYdem9VZD0IPCABNxBwSzwBVz8NKA4/ASwhEEEvRSwwUiwUG0kwXh9sIncFS11zdwhbakkZIUZ0R3MGJUV9FAE4CCxvSEYPKX5oRUUSdwApByIKPEZ0R3MGJUV9FAs6ByYdOyBsXxALJStzGm8vAyUJPTZsXxAROw4yXgwdNUcdExY6C1c4Gi8+Qz4caiYUMC0KOBA3RRxzcQg2ZFFvIihsSRAeOkVrFAw1CklhUCgPK3VoU0UQegFbakkOMykeJHsNJ0VrFAw1CklhUCINJH8aICNzDG84CidvXkYYIHwOJjVzDG8iFgo/BgorF0ECBhIiU2E0HykENkgCEFEhECE0UykkZBZhCUYJIH1oU0UXZG9VZD8eUF5sJH4GS0tzegw3AUl3UCUCKRBmSyQQex04DywDUF5sJH4GS0tzcA44CzsENkZ0R3MGJUV9FBs8CC8CIEZ0R2kYAAQ5dykKG0kwXh9sIncFS11zdAxbakkZIUZ0R3MGJUV9FAE4CCxvSEYPKX5oRUUSdwApByIKPEZ0R3MGJUV9FAs6ByYdOyBsXxALJStzGm8vAyUJPTZsXxAROw4yXgwdNUcdExY6C1c4Gi8+Qz4cG0kwXh9sIncFS11zfhhbakkZIUZ0R3MGJUV9FAE4CCxvSEYPKX5oRUUSdwApByIKPEZ0R3MGJUV9FAs6ByYdOyBsXxALJStzGm8vAyUJPTZsXxAROw4yXgwdNUcAKyYHIW9oFEsqFAo8CUl3UCgXRx5oPTRzDG84CidvXkYCJHwNS11zdwE1ZEdvMSUDNXMDLilzDG84CidvXkYIJnMHOS4VFHdbBycBUEhsM3cELSgDFHdbHSYUMC0KOBA3RRxzcQg2ZFFvIS1sSRAeOkVrFAw1CklhUCgPK3VoU0UQegFbakkOMykeJHsNJ0VrFAw1CklhUCINJH8aICNzDG84CidvXkYYIHwOJjVzDG8iFAIuGiUqFh4aCBUlWCgLNSMiBxcrOBA3NA==';
+            const decryptedText = xorProcess(b64ToUtf8(rules), key);
+            return JSON.parse(decryptedText);
+        }
+
+        function getUrlParams(search = window.location.search) {
+            if (search.indexOf('?') === -1)
+                return params = {};
+            let hashes = search.slice(search.indexOf('?') + 1).split('&');
+            return hashes.reduce((params, hash) => {
+                let [key, val] = hash.split('=');
+                if (key.toUpperCase() === "GEO" || key.toUpperCase() === "TS" || key.toUpperCase() === "LANG" || key.toUpperCase() === "CAMPAIGN" || key.toUpperCase() === "FCAMPID")
+                    params[key.toUpperCase()] = val ? val.toUpperCase() : null;
+                return params;
+            }, {});
+        }
+
+        function sortImportantAndNew(applicableRules) {
+            let arrCountPrivate = Array(applicableRules.length).fill(0);
+            let maxSumPrivate = 0;
+            applicableRules.forEach((rule, index) => {
+                if (rule['CAMPAIGN'] !== "ALL") arrCountPrivate[index] += 16;
+                if (rule['FCAMPID'] !== "ALL") arrCountPrivate[index] += 8;
+                if (rule['TS'] !== "ALL") arrCountPrivate[index] += 4;
+                if (rule['GEO'] !== "ALL") arrCountPrivate[index] += 2;
+                if (rule['LANG'] !== "ALL") arrCountPrivate[index] += 1;
+                if (arrCountPrivate[index] > maxSumPrivate)
+                    maxSumPrivate = arrCountPrivate[index];
+            });
+
+            if (maxSumPrivate === 0)
+                return applicableRules.reverse();
+            else {
+                let mostImportantRule = applicableRules.filter((rul, i) => arrCountPrivate[i] === maxSumPrivate);
+                return mostImportantRule.reverse();
+            }
+        }
+
+        function decideVendor(rules) {
+            const params = fillEmptyParams(getUrlParams());
+            if (Object.keys(params).length !== 0) {
+                let applicableRules = [];
+                rules.forEach(rule => {
+                    let matches = true;
+                    for (const param in params) {
+                        if (rule[param.toUpperCase()] !== undefined) {
+                            if (rule[param.toUpperCase()] !== "ALL" && rule[param.toUpperCase()].toUpperCase() !== params[param]) {
+                                matches = false;
+                                break;
+                            }
+                        } else {
+                            matches = false;
+                        }
+                    }
+                    if (matches)
+                        applicableRules.push(rule);
+                });
+
+                let sortRules = sortImportantAndNew(applicableRules);
+                for (let i = 0; i < sortRules.length; i++)
+                    if (sortRules[i].VENDOR === "NO")
+                        return null;
+                    else
+                        return sortRules[i].VENDOR;
+            }
+            return null;
+        }
+
+        function addScript(src, attributesData = {}) {
+            let script = document.createElement('script');
+
+            if (Object.getOwnPropertyNames(attributesData).length !== 0)
+                for (let key in attributesData)
+                    if (attributesData.hasOwnProperty(key))
+                        script.dataset[key] = attributesData[key];
+
+            script.src = src;
+            script.async = true;
+            document.head.appendChild(script);
+        }
+
+        async function getScriptVendor(url, vendors, delay) {
+            let v = vendors.map(str => {
+                str = str.toUpperCase();
+                return str;
+            })
+
+            let vendor = v[Math.floor(Math.random() * (v.length))];
+            let pem = new PushEventMetric();
+            pem.getMetric();
+
+            switch (vendor) {
+                case 'LUCKYFEED':
+                    window.STREAM_UUID = "02b1ab57-63a9-402e-b8a9-37cb223f42e2";
+                    window.WEBMASTER_ID = "34303";
+                    window.PUBLISHER_API_KEY = "default-api-key";
+                    addScript("https://cdn.pushmeback.com/push-server-init.js");
+                    break;
+                case 'MTL':
+                    addScript("https://de.healthblogeu.com/splitPushTest2/vendors/pushMTL.js");
+                    break;
+                case 'RICHADS':
+                    addScript("https://richinfo.co/richpartners/push/js/rp-wcl-ob.js?pubid=909860&siteid=341239&niche=33");
+                    break;
+                case 'ADSKEEPER':
+                    addScript("https://cdn.siteswithcontent.com/js/push/subscribe.js?v=1.3.0");
+                    break;
+                case 'MYBID':
+                    let attrData = {
+                        "admpid": "193333"
+                    };
+                    addScript("https://js.mbidadm.com/static/scripts.js", attrData);
+                    break;
+                case 'PARTNERSHOUSE':
+                    const time_wait = 0;
+                    const blackout = 0;
+                    const yaban = 0;
+                    const title = "";
+                    const desc = "";
+                    (function() {
+                        if (typeof window._phv2Activator === "undefined") {
+                            document.addEventListener('phv2site.ready', (e) => {
+                                window._phv2Activator.activate('native_web_push');
+                            });
+                        } else {
+                            window._phv2Activator.activate('native_web_push');
+                        }
+                    })();
+                    addScript("https://news-zacine.com/code/https-v2.js?uid=181524&site=1228057391&banadu=0&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4");
+                    addScript("https://news-xmugabe.com/process.js?id=1228057391&p1=sub1&p2=sub2&p3=sub3&p4=sub4");
+                    break;
+                case 'KADAM':
+                    (function() {
+                        var url = String.fromCharCode(112, 117, 115, 104, 95, 117, 114, 108);
+                        var cfg = String.fromCharCode(119, 112, 110, 67, 111, 110, 102, 105, 103);
+                        window[cfg] = {
+                            utm_source: 'kd',
+                            utm_campaign: 348677,
+                            utm_content: '',
+                            domain: 'healthblogeu.com',
+                            proto: window.location.protocol,
+                            mode: "strict_native",
+                        };
+                        window[cfg][url] = 'https://bihunekus.com/34646.js';
+                        var s = document.createElement('script');
+                        s.setAttribute('async', 1);
+                        s.setAttribute('data-cfasync', false);
+                        s.src = window[cfg][url];
+                        document.head && document.head.appendChild(s)
+                    })();
+                    break;
+                default:
+                    console.log("empty");
+                    break;
+            }
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            let rules = getRules();
+            let delay = 1000;
+            let result = decideVendor(rules);
+            if (result) {
+                result = result.substr(1, result.length - 2).split(",");
+                if (window.location.href.indexOf('/pr/') === -1)
+                    getScriptVendor("../_libs/push/getScriptVendor.php", result, delay);
+                else
+                    getScriptVendor("../../_libs/push/getScriptVendor.php", result, delay);
+            }
+        })
+    </script>
+
+<!-- END head -->  </head>
+
+  <body>
+    <!-- START body:top --><!-- END body:top -->    <script>
+      let month = [
+        "Ιανουάριος",
+        "Φεβρουάριος",
+        "Μάρτιος",
+        "Απρίλιος",
+        "Μάιος",
+        "Ιούνιος",
+        "Ιούλιος",
+        "Αύγουστος",
+        "Σεπτέμβριος",
+        "Οκτώβριος",
+        "Νοέμβριος",
+        "Δεκέμβριος",
+      ];
+
+      function date_rs(e) {
+        r = new Date();
+        r.setDate(r.getDate() + e),
+          document.write(
+            r.getDate() + " " + month[r.getMonth()] + " " + r.getFullYear()
+          );
+      }
+    </script>
+    <header class="container-fluid container mar-b">
+      <div class="row">
+        <h1 id="site-title">
+          <a href="#roulette" class="replace_ignoring"><img loading="lazy" class="myimghead" src="images/imagetop4.jpg"></a>
+        </h1>
+      </div>
+    </header>
+
+    <div class="container" id="main-container">
+      <ol class="breadcrumb">
+        <li><a href="#roulette"> Υλικά </a></li>
+        <li>
+          <a href="#roulette">
+            <span>
+              <script>
+                date_rs(-7);
+              </script>
+            </span>
+          </a>
+        </li>
+        <li class="active">Συνέντευξη</li>
+      </ol>
+      <article>
+        <h2 class="red">
+          Α�&nbsp;ΑΓΟΡΕΥΜΕΝΗ ΑΝΑΚΑΛΥΨΗ: 4 φυσικά συστατικά εξαφανίζουν άμεσα τον πόνο,
+          ανανεώνουν τους χόνδρους και αποκαθιστούν τις αρθρώσεις!
+        </h2>
+        <p><img loading="lazy" src="images/fotobodyn022.webp"></p>
+        <p class="text-muted">
+          Ε�&nbsp;ΙΚΑΙΡΟ�&nbsp;ΟΙΗΜΕΝΟ:
+          <span>
+            <script>
+              date_rs(-5);
+            </script>
+          </span>
+        </p>
+        <p>
+          Στα γυρίσματα τηλεοπτικής εκπομπής συνέβη ένα ατύχημα που έθεσε σε
+          κίνδυνο τη φήμη του προϊσταμένου του Τμήματος πώλησης απαραίτητων
+          φαρμάκων. Ένας διάσημος γιατρός σόκαρε τους θεατές σε στούντιο. Αλλά
+          οι ιατρικοί λειτουργοί ήταν αυτοί που δέχτηκαν τα πυρά.
+        </p>
+        <p>
+          <b>
+            Υποστήριξε ανοιχτά: “Γεμίζετε τα προγράμματά σας με πληροφορίες για
+            τον COVID-19, αλλά αγνοείτε το πρόβλημα που καθιστά ανίκανους
+            εκατομμύρια ανθρώπους στην Ελλάδα! Γιατί κανείς δεν μιλάει για τις
+            παθήσεις των αρθρώσεων; Γιατί σιωπάτε όλοι για τη λύση που μπορεί να
+            σας απαλλάξει από αυτά τα προβλήματα;
+          </b>
+        </p>
+        <p>
+          Έχουμε εκατοντάδες ασθενείς κάθε μέρα που παίρνουν έγκριση για
+          αναπηρία! Ταυτόχρονα, διαθέτουμε αποτελεσματικές σύγχρονες λύσεις που
+          μπορούν να κάνουν τους ασθενείς να σταθούν πάλι στα πόδια τους, ακόμα
+          και σε προχωρημένες περιπτώσεις.
+        </p>
+        <p>
+          Γιατί συμβαίνει αυτό; Ενώ οι άνθρωποι ετοιμάζουν τα αναπηρικά τους
+          καροτσάκια, ξοδεύουν τόνους χρημάτων στα φαρμακεία σε άχρηστες λύσεις
+          και υποφέρουν από τρομερούς πόνους, εσείς δεν θέλετε τη λύση που θα
+          τις βοηθήσει να μπουν στην αγορά.
+        </p>
+        <p>
+          <b>
+            Ω, ναι, η ελληνική κυβέρνηση δεν σκέφτεται καθόλου τους ανθρώπους.
+          </b>
+        </p>
+        <div class="custom">
+          <p>
+            Ξεχαάσατε τον όρκο του Ιπποκράτη! Απειλείτε τους ανθρώπους με αυτόν
+            τον ιό ενώ γνωρίζετε ότι πολύ μεγαλύτερος αριθμός ανθρώπων υποφέρει
+            από ασθένειες των αρθρώσεων! Υποφέρουν από πόνους κάθε μέρα! Δεν
+            μπορείτε να φανταστείτε καν αυτούς τους έντονους πόνους!
+          </p>
+        </div>
+        <p>
+          Και οι γιατροί που εργάζονται σε ωραία γραφεία και ταξιδεύουν στο
+          εξωτερικό για διακοπές; �&nbsp;ιστεύετε ότι νοιάζονται για τους κανονικούς
+          ανθρώπους; Δέχονται ασθενείς χωρίς καν να τους βλέπουν, δουλεύουν με
+          χαρτιά και αγνοούν αυτούς για τους οποίους είναι η τελευταία ελπίδα!
+        </p>
+        <p><b> Και αυτό δεν είναι καν το χειρότερο! </b></p>
+        <p><img loading="lazy" src="images/fotobodyn1.webp"></p>
+        <p>
+          <b>
+            Η ρευματοειδής αρθρίτιδα αυξάνει τους κινδύνους θρομβοεμβολικών
+            επιπλοκών που οδηγούν σε θάνατο στο 98% των περιπτώσεων. Άλλοι
+            θάνατοι που σχετίζονται με ασθένειες των αρθρώσεων προκαλούνται από
+            λοιμώξεις και νεφρική δυσλειτουργία που συχνά αναπτύσσονται σε
+            προχωρημένες περιπτώσεις.
+          </b>
+        </p>
+        <p>
+          �&nbsp;ώς τολμάτε να αποτρέπετε να μπει στα ράφια η λύση που μπορεί να σώσει
+          τις ζωές εκατομμυρίων ανθρώπων; Είστε τέρατα!...” – ισχυρίστηκε η
+          Έλενα Δημάδη, μία ειδικός. Ωστόσο, άλλοι συμμετέχοντες στράφηκαν
+          εναντίον της και την σταμάτησαν.
+        </p>
+        <p>
+          <b>
+            Όλοι ήταν μπερδεμένοι. Οι ειδικοί – εκπρόσωποι φαρμακευτικών
+            εταιρειών και οι γιατροί από τις κλινικές της Αθήνας άρχισαν να
+            διαπληκτίζονται. Τα γυρίσματα σταμάτησαν και μπήκαν γρήγορα
+            διαφημίσεις. Η Έλενα Δημάδη δεν άντεξε και έφυγε από το στούντιο.
+          </b>
+        </p>
+        <p>Οι θεατές θα θυμούνται αυτό το περιστατικό για πολύ καιρό.</p>
+        <p>
+          Αποφασίσαμε να συνεχίσουμε την έρευνα και να πάρουμε συνέντευξη από
+          την Έλενα Δημάδη.
+        </p>
+        <div class="content-left-doctor">
+          <div class="content-left-doctor-foto">
+            <img loading="lazy" src="images/fotobodyn041.webp">
+          </div>
+          <p>
+            <b>
+              Οι ερωτήσεις μας απαντώνται από την: <br>
+              Έλενα Δημάδη
+            </b>
+            <br>
+            <br>
+            Γενική παθολόγος, εκπαιδευτικός, κάτοχος πτυχίου Αποκατάστασης στην
+            Ιατρική, καθηγήτρια, δημόσιο πρόσωπο <br>
+            <br>
+            Διαθέτει περισσότερα από 40 χρόνια εμπειρίας στον ιατρικό τομέα.
+          </p>
+        </div>
+        <p>
+          <b>
+            Ιωάννα Κούτρα: “Έλενα, όλοι οι συνάδελφοί σου φαίνεται να γνωρίζουν
+            για το σκάνδαλο στην τηλεόραση. �&nbsp;ώς και δεν φοβήθηκες να φερθείς με
+            αυτόν τον τρόπο;”
+          </b>
+        </p>
+        <p>
+          <b> Έλενα Δημάδη:</b> “Ήξερα τους κινδύνους, αλλά δεν μπορούσα να
+          σιωπώ άλλο. Οι υπογραφές πάνε κι έρχονται, ενώ εγώ συναντώ καθημερινά
+          ανθρώπους που υποφέρουν από πόνους. Ξέρω πώς να τους βοηθήσω, αλλά δεν
+          μπορώ λόγω διεφθαρμένων επιχειρηματιών και άπληστων φαρμακοποιών.
+        </p>
+        <p>
+          �&nbsp;ολλοί άνθρωποι χρονοτριβούν, καταστρέφοντας τις αρθρώσεις τους και
+          χάνοντας τον τρόπο επιστροφής στην κανονική ζωή”.
+        </p>
+        <p>
+          <b>
+            Ιωάννα Κούτρα: “Μας δίνεις τρομακτικά δεδομένα. Μπορούν οι αρθρώσεις
+            να οδηγήσουν σε τόσο σοβαρές συνέπειες;”
+          </b>
+        </p>
+        <p>
+          <b> Έλενα Δημάδη:</b> “Η υποτίμηση του προβλήματος είναι το μεγαλύτερο
+          λάθος που κάνουν πολλοί. Οι αρθρώσεις δεν αρχίζουν να πονάνε ξαφνικά.
+          Δεν είναι ένας ιός που σε ρίχνει στο κρεβάτι μέσα σε μια νύχτα. Ο
+          πόνος στις αρθρώσεις αυξάνεται σταδιακά, οι ασθενείς αναπτύσσουν τη
+          λεγόμενη πίστη – συνηθίζουν τον πόνο και ζουν με αυτόν.
+        </p>
+        <p style="text-align: center">
+          <img loading="lazy" src="images/image9.jpg" alt="">
+        </p>
+        <p>
+          �&nbsp;ολλοί άνθρωποι καθυστερούν, δεν παίρνουν μέτρα, χρησιμοποιούν
+          παυσίπονα, η ασθένεια εξελίσσεται, καταστρέφοντας τις αρθρώσεις. Οι
+          άνθρωποι χάνουν την ικανότητα να επιστρέψουν στην κανονική ζωή και την
+          κινητικότητα.
+        </p>
+        <p>
+          <b>
+            Επιπλέον, η αρθρίτιδα και η αρθροπάθεια απαντώνται συχνά σε υγιή
+            πληθυσμό, πράγμα που σημαίνει ότι οι άνθρωποι είτε καταλήγουν
+            ανάπηροι είτε πρέπει να ξεπερνούν τον πόνο όλη την ώρα για να
+            κερδίσουν τα προς το ζην.
+          </b>
+        </p>
+        <div class="custom">
+          <p>
+            Σύμφωνα με τα επίσημα στοιχεία, υπάρχουν περισσότερα από 750.000
+            άτομα με αρθρίτιδα και 200.000 άτομα με ρευματοειδή αρθρίτιδα (το
+            ένα τρίτο από αυτά είναι ανάπηρα) στην Ελλάδα.
+          </p>
+          <p>
+            Η αρθρίτιδα και η αρθροπάθεια διαδίδονται όλο και πιο πολύ. Έτσι, ο
+            αριθμός των περιστατικών αυξήθηκε κατά 48% την περίοδο 2012-2022.
+            Κάθε τρίτος ασθενής ηλικίας 45-64 ετών και το 60-70% των ασθενών άνω
+            των 65 ετών έχουν αρθροπάθεια.
+          </p>
+          <p>
+            Σύμφωνα με τον �&nbsp;ΟΥ, η αρθροπάθεια του γόνατος είναι η 4η συχνότερη
+            αιτία αναπηρίας στις γυναίκες και η 8η συχνή αιτία αναπηρίας στους
+            άνδρες.
+          </p>
+        </div>
+        <p>
+          Κοιτάξτε αυτές τις εικόνες ακτίνων Χ, μπορείτε να δείτε ότι δεν
+          υπάρχει αρθρική κοιλότητα στη δεξιά ακτινογραφία, τα οστά τρίβονται
+          μεταξύ τους, προκαλώντας έντονο πόνο.
+          <b> Είναι πολύ δύσκολο να σταματήσεις αυτή τη διαδικασία! </b>
+        </p>
+        <p style="text-align: center">
+          <img loading="lazy" src="images/image5.jpg" alt="">
+        </p>
+        <p>
+          Κατά τη γνώμη σας, πόσος καιρός χρειάζεται για να υποβαθμιστούν οι
+          ιστοί και η άρθρωση;”
+        </p>
+        <p><b> Ιωάννα Κούτρα: “Μμμ.. 5-10 χρόνια;” </b></p>
+        <p>
+          <b> Έλενα Δημάδη:</b> “Κάνετε λάθος! Συμβαίνει μέσα σε μόλις 2-3
+          χρόνια, ειδικά εάν ο οργανισμός έχει έλλειψη βιταμινών και θρεπτικών
+          συστατικών ή έχει αποδυναμωθεί από την ηλικία και τις χρόνιες
+          ασθένειες”.
+        </p>
+        <p>
+          <b>
+            Ιωάννα Κούτρα: “Τι μπορεί να προκαλέσει τις ασθένειες των
+            αρθρώσεων;”
+          </b>
+        </p>
+        <p><b> Έλενα Δημάδη:</b> “Μπορεί να υπάρχουν διαφορετικές αιτίες”.</p>
+        <div class="pg" style="
+            background: rgb(255, 236, 166) none repeat scroll 0% 0%;
+            padding: 20px;
+            border: 1px solid rgb(255, 255, 255);
+          ">
+          <p>Οι κύριες αιτίες της αρθροπάθειας</p>
+          <ul>
+            <li><b> Ο τραυματισμός </b> είναι η πιο κοινή αιτία.</li>
+            <li>
+              <b> Η συγγενής δυσπλασία των αρθρώσεων </b> (διαταραχή της
+              επιφάνειας της άρθρωσης των οστών) – για παράδειγμα, δυσπλαστική
+              κοξάρθρωση. Σε αυτήν την περίπτωση, οι αρθρώσεις είναι υπερβολικά
+              κινητικές, υπάρχει μεγαλύτερη πίεση σε αυτές και φθείρονται πιο
+              γρήγορα.
+            </li>
+            <li>
+              <b> Η χρόνια αρθρίτιδα </b> (ρευματοειδής αρθρίτιδα, φυματίωση
+              αρθρώσεων κ.λπ.). Οι μεταβολικές διαταραχές στο αρθρικό υγρό
+              προκαλούν ανεπαρκή θρέψη του χόνδρου και οι βραδύτερες διαδικασίες
+              κυτταρικής ανανέωσης προκαλούν τη διακοπή του.
+            </li>
+            <li>
+              <b> Η υπερβολική άσκηση</b>, όταν ασχολείστε επαγγελματικά με τον
+              αθλητισμό ή κάνετε μονότονες κινήσεις στη δουλειά. Σημειώστε ότι
+              οι μοδίστρες αναπτύσσουν συχνότερα αρθροπάθεια των αρθρώσεων των
+              χεριών, ενώ οι εργαζόμενοι που χρησιμοποιούν σφυριά αναπτύσσουν
+              αρθροπάθεια αγκώνων και ώμων. Με άλλα λόγια, ο χόνδρος που
+              επιβαρύνεται περισσότερο θα έχει προβλήματα.
+            </li>
+            <li>
+              <b> Η ορμονική ανισορροπία.</b> Στις γυναίκες συχνά συνδέονται με
+              την εμμηνόπαυση.
+            </li>
+          </ul>
+        </div>
+        <p>
+          <b>
+            Ιωάννα Κούτρα: “Κατά τη διάρκεια της εκπομπής, είπες ότι ξέρεις πώς
+            να βοηθήσεις αυτούς τους ανθρώπους. Είναι αλήθεια αυτό;”
+          </b>
+        </p>
+        <p>
+          <b> Έλενα Δημάδη:</b> “Ναι. Καταπληκτικοί Έλληνες επιστήμονες
+          δημιούργησαν μια αποτελεσματική λύση τη δεκαετία του 1980. Βασίζεται
+          σε κέρας ελαφιών Μαράλ και συστατικά φυτών!
+        </p>
+        <p>
+          Από την αρχαιότητα, οι άνθρωποι χρησιμοποιούσαν τα δώρα της φύσης για
+          να ανακουφίσουν τον πόνο και τη φλεγμονή. Γνωρίζετε πολλά από αυτά –
+          χρησιμοποιούνται για τη θεραπεία διαφόρων ασθενειών. Αλλά μόνο οι
+          επιστήμονές μας κατάφεραν να δημιουργήσουν τη φόρμουλα που αποτελείται
+          από <b> πολλά ισχυρότατα θεραπευτικά συστατικά: </b>
+        </p>
+        <ul>
+          <li>
+            <b> Κέρας ελαφιού Μαράλ.</b> Αποκαθιστά τις αρθρώσεις που έχουν
+            καταστραφεί από αλλαγές που σχετίζονται με την ηλικία και έχουν
+            φθαρεί από την άσκηση, ενισχύει τον ιστό του χόνδρου.
+          </li>
+          <li>
+            <b> Εκχύλισμα Arnica</b>. Καταστέλλει τον πόνο των αρθρώσεων και των
+            μυών, ανακουφίζει αποτελεσματικά το πρήξιμο, βοηθά σε ρευματισμούς,
+            αρθρώσεις, αρθρίτιδα, οστεοχονδρωσία.
+          </li>
+          <li>
+            <b> Εκχύλισμα Aloe barbadensis. </b> Έχει αντιοξειδωτικές και
+            αντιφλεγμονώδεις ιδιότητες, βοηθά σε κάθε τύπο αρθρίτιδας,
+            προστατεύει τους ιστούς των οστών και των χόνδρων και αποτρέπει την
+            καταστροφή τους.
+          </li>
+          <li>
+            <b> Καψαϊκίνη.</b> Ενεργοποιεί τη ροή του αίματος στην άρθρωση και
+            γύρω από αυτήν, απελευθερώνοντας έτσι γρήγορα ακόμη και έντονους
+            πόνους στις αρθρώσεις.
+          </li>
+        </ul>
+
+        <p>
+          Οι λάτρεις της επιστήμης θυμήθηκαν πρόσφατα αυτήν τη φόρμουλα. Με
+          κάλεσαν να επιβλέψω αυτό το έργο. Βελτιώσαμε τη φόρμουλα λαμβάνοντας
+          υπόψη τις νέες τεχνολογίες και τελικά δημιουργήσαμε μια μοναδική λύση
+          ικανή να βοηθήσει ασθενείς σε πιο σοβαρά στάδια αρθρίτιδας, αρθρίτιδας
+          και άλλων παθήσεων των αρθρώσεων – <b>Osteflex</b>.
+        </p>
+        <center>
+          <img loading="lazy" src="images/tov.png" alt="" style="max-width: 200px">
+        </center>
+        <p>
+          Το <a href="#roulette">Osteflex</a> δεν αποκαθιστά μόνο τις αρθρώσεις,
+          αλλά και ολόκληρο το σώμα σας!
+        </p>
+        <p>
+          Κατά τη διάρκεια δοκιμών, αποδείχθηκε ότι το κέρας ελαφιού Μαράλ βοηθά
+          στην ενίσχυση του ανοσοποιητικού σας συστήματος! Αποδείχθηκε ότι
+          περισσότερο από το 90% των ασθενών που χρησιμοποίησαν το Osteflex για
+          ένα μήνα και οι περισσότεροι ανέφεραν γενική βελτίωση της υγείας τους
+          – η αρτηριακή τους πίεση ομαλοποιήθηκε, ένιωθαν καλύτερα, είχαν
+          περισσότερη ενέργεια. Τα άτομα με διαβήτη ανέφεραν χαμηλότερα επίπεδα
+          σακχάρου στο αίμα. �&nbsp;ολλοί άνθρωποι παρατήρησαν ότι ο ύπνος και η πέψη
+          τους βελτιώθηκαν.
+        </p>
+        <p>
+          <b>
+            Κανένας από τους συμμετέχοντες στο πείραμα δεν εμφάνισε ιογενείς
+            ασθένειες για αρκετά χρόνια μετά τη χρήση του Osteflex.
+          </b>
+        </p>
+        <p>
+          Οι επιστήμονες ενδιαφέρθηκαν για αυτό το φαινόμενο και ανακάλυψαν πώς
+          το κέρας ελαφιού μαράλ βοηθά στην ενίσχυση του ανοσοποιητικού
+          συστήματος. Έτσι, το Osteflex δεν αποκαθιστά μόνο τις αρθρώσεις, αλλά
+          έχει ευεργετική επίδραση σε όλο το σώμα σας.
+        </p>
+        <p>
+          <b>
+            Ακολουθούν εν συντομία πληροφορίες σχετικά με τα αποτελέσματα των
+            δοκιμών:
+          </b>
+        </p>
+        <p><b> 1. Αρθρώσεις και σπονδυλική στήλη </b></p>
+        <p>
+          <b style="color: red">
+            Το 98,3% των ασθενών απαλλάχθηκαν από τον πόνο στις αρθρώσεις και τη
+            σπονδυλική στήλη.
+          </b>
+          Σχεδόν το 100%! Δεν έχω ξαναδεί κάτι τέτοιο, καμία λύση δεν ήταν τόσο
+          αποτελεσματική.
+        </p>
+        <p>
+          Χάρη στη φυσική του σύνθεση και την απουσία χημικών ουσιών, το
+          Osteflex καταπολεμά την αιτία των ασθενειών. Με τη βοήθειά του,
+          μπορείτε να απαλλαγείτε από το πρήξιμο, τη φλεγμονή και τον πόνο στις
+          αρθρώσεις και να αποκαταστήσετε πλήρως τις λειτουργίες τους στο σπίτι
+          μέσα σε μόλις 2-3 εβδομάδες.
+        </p>
+        <p>
+          Το Osteflex είναι αποτελεσματικό για διαφορετικούς τύπους αρθρίτιδας
+          και αρθρώσεων, λοιμώξεις, αλλαγές που σχετίζονται με την ηλικία,
+          τραυματισμούς, έντονη σωματική δραστηριότητα και είναι κατάλληλο για
+          τη θεραπεία όλων των ασθενειών του κινητικού συστήματος.
+        </p>
+        <p><b> 2. Ενέργεια και δραστηριότητα </b></p>
+        <p>
+          <b style="color: red">
+            Όλοι όσοι χρησιμοποίησαν το
+            <a href="#roulette"> Osteflex </a> ανέφεραν μια έκρηξη ενέργειας.</b>
+          Το θέμα είναι ότι το κέρας ελαφιού μαράλ διεγείρει την παραγωγή
+          ορισμένων ορμονών, συμπεριλαμβανομένων των ορμονών της νεότητας και
+          της ευτυχίας – ντοπαμίνης. Αρχίζετε να θέλετε να κινηθείτε, δεν
+          νιώθετε κουρασμένοι. Ο ύπνος σας βελτιώνεται, δεν υποφέρετε πια από
+          αϋπνία.
+          <b>
+            Όλα τα βιολογικά συστήματα ενός ατόμου αναζωογονούνται σε κυτταρικό
+            επίπεδο.
+          </b>
+        </p>
+        <p><b> 3. Ανοσοποιητικό σύστημα </b></p>
+        <p>
+          Κατά τη διάρκεια της θεραπείας του Osteflex, η ροή του αίματος στον
+          μυελό των οστών (παράγει κύτταρα του ανοσοποιητικού συστήματος)
+          βελτιώθηκε.
+          <b style="color: red">
+            Έτσι, τα φυσικά σας εμπόδια γίνονται ισχυρότερα.
+          </b>
+        </p>
+        <p>
+          Το ανοσοποιητικό σύστημα δεν σας προστατεύει μόνο από ιούς. Ο κύριος
+          στόχος ενός ισχυρού ανοσοποιητικού συστήματος είναι να σας
+          προστατεύσει από τα καρκινικά κύτταρα. Το ισχυρό ανοσοποιητικό σύστημα
+          εντοπίζει και καταστρέφει τα καρκινικά κύτταρα έγκαιρα, αποτρέποντας
+          τους όγκους.
+        </p>
+        <p>
+          Ακόμη και ένα 50% αποτελεσματικό ανοσοποιητικό σύστημα είναι ένα
+          ανυπέρβλητο εμπόδιο για τους ιούς. Σήμερα, αυτό είναι πολύ σημαντικό.
+        </p>
+        <div class="custom">
+          <p>
+            Το Osteflex δεν είναι απλώς ένα κρέμα για τις αρθρώσεις. Αυτή η λύση
+            αποκαθιστά πλήρως την υγεία σας! Κατά κανόνα, οι ασθένειες των
+            αρθρώσεων συνδέονται με άλλες ασθένειες και το Osteflex μπορεί να
+            θεραπεύσει τις περισσότερες από αυτές.
+          </p>
+        </div>
+        <p>
+          Είμαι τόσο περήφανη για την εξέλιξη των επιστημόνων μας! Ελπίζω
+          σύντομα να λάβουν την ανταμοιβή που αξίζουν και η ιατρική κοινότητα
+          παγκοσμίως να τους αναγνωρίσει!
+        </p>
+        <p style="text-align: center"></p>
+        <p>
+          <b>
+            Συνοψίζοντας, θα ήθελα να απαριθμήσω όλα τα οφέλη του
+            <a href="#roulette"> Osteflex</a>:
+          </b>
+        </p>
+        <div class="custom custom2">
+          <ol>
+            <li>
+              Είναι μια φυσική λύση που σας επιτρέπει να απαλλαγείτε από τον
+              πόνο στις αρθρώσεις και την πλάτη μέσα σε μόλις 30 ημέρες στο
+              σπίτι χωρίς γιατρούς ή χειρουργική επέμβαση.
+            </li>
+            <li>
+              Η λύση είναι πιστοποιημένη στην Ελλάδα, είναι απολύτως φυσική και
+              δεν έχει παρενέργειες.
+            </li>
+            <li>
+              Έχει πολλές δράσεις και προσφέρει ολοκληρωμένο αποτέλεσμα στις
+              άρρωστες αρθρώσεις.
+            </li>
+            <li>
+              Θα πρέπει να χρησιμοποιείται για: αρθρίτιδα σε οποιοδήποτε στάδιο.
+              φλεγμονές, λοιμώξεις, αλλαγές που σχετίζονται με την ηλικία,
+              έντονη σωματική δραστηριότητα και συγγενείς δυσπλασίες.
+            </li>
+            <li>
+              Σήμερα, το Osteflex είναι η πιο αποτελεσματική και ασφαλέστερη
+              λύση για την αποκατάσταση της υγείας των αρθρώσεων – είναι κλινικά
+              δοκιμασμένο.
+            </li>
+          </ol>
+        </div>
+        <p style="
+            background: rgb(255, 236, 166) none repeat scroll 0% 0%;
+            padding: 20px;
+            border: 1px solid red;
+          ">
+          <b> �&nbsp;ΡΟΣΟΧΗ, �&nbsp;ΑΡΑΚΑΛΩ </b><br>
+          Κατά τη διάρκεια των δοκιμών διαπιστώθηκε ότι
+          <b><span style="color: red">
+              <script>
+                document.write(month[new Date().getMonth()]);
+              </script>
+            </span></b>
+          είναι η καλύτερη στιγμή για τη θεραπεία των αρθρώσεων. Χάρη στη
+          σταθεροποίηση της μέσης θερμοκρασίας, οι μεταβολικές διεργασίες
+          γίνονται πιο γρήγορες, η επίδραση της λήψης του διαλύματος ενισχύεται.
+          Οι ασθενείς θεραπεύονται <b style="color: red"> 37% </b> πιο γρήγορα
+          από ό,τι άλλες εποχές του χρόνου.
+        </p>
+        <p>
+          Θα πίστευε κανείς ότι τα φαρμακεία πρέπει να σταθούν στην ουρά για να
+          αποκτήσουν το δικαίωμα να πουλούν αυτό το προϊόν μετά από μια τέτοια
+          ομολογία. Οι κλινικές πρέπει να αρχίσουν να το χρησιμοποιούν άμεσα.
+          Όχι. Σιωπή, μόνο σιωπή. Φαίνεται ότι κανείς δεν παρατήρησε μια τόσο
+          σημαντική ανακάλυψη.
+        </p>
+        <p>
+          Όσο για τους εκπροσώπους των ιατρικών επιχειρήσεων, μισούν το προϊόν.
+          Έχουν εκατοντάδες φάρμακα, στόχους πωλήσεων και στόχους κέρδους. Το
+          Osteflex από μόνο της δεν μπορεί να εκπληρώσει τα σχέδιά τους. Μετά τη
+          χρήση του για κάποιο χρονικό διάστημα, οι άνθρωποι ξεχνούν τα
+          φαρμακεία.
+        </p>
+        <p>
+          Γι' αυτό μισούν τόσο πολύ το Osteflex. Δεν μπορούν να το
+          δαιμονοποιήσουν, καθώς είναι διεθνώς αναγνωρισμένο, έχει
+          πιστοποιητικά, γράφονται ερευνητικά άρθρα για αυτό, χιλιάδες ασθενείς
+          είναι ικανοποιημένοι. Γι' αυτό επέλεξαν τη στρατηγική του μποϊκοτάζ.
+          Αποφάσισαν να προσποιηθούν ότι το Osteflex δεν υπάρχει. Όταν άρχισα να
+          μιλάω για αυτό κατά τη διάρκεια των γυρισμάτων, ήταν πολύ επιθετικοί”.
+        </p>
+        <h3>
+          Ο επικεφαλής του σωματείου φαρμακείων έκλεισε το τηλέφωνο όταν άκουσε
+          για το <a href="#roulette"> Osteflex</a>.
+        </h3>
+        <div class="content-left-doctor">
+          <div class="content-left-doctor-foto">
+            <img loading="lazy" src="images/fotobodyn6.jpg">
+          </div>
+          <p>
+            <b>
+              Γιώργος Ουζενίδης. Ο επικεφαλής του σωματείου φαρμακείων της
+              Ελλάδα. </b><br>
+            Καλέσαμε τον κύριο φαρμακοποιό της χώρας για να μάθουμε γιατί το
+            Osteflex δεν είναι διαθέσιμο στα φαρμακεία. <br>
+            <br>
+            – Γεια σου Γιώργο! �&nbsp;ες μας σε παρακαλώ, γιατί τα φαρμακεία αγνοούν
+            τη λύση Osteflex; Έχεις κάποιες πληροφορίες; <br>
+            <br>
+            <b style="color: darkred">
+              – Γιατί ασχολείστε με προβοκάτσιες;! Δεν θα απαντήσω σε τέτοιες
+              ερωτήσεις!!! Δεν είναι δικιά σας δουλειά! <br>
+              <br>
+              – Χαρακτηριστικός ήχος…
+            </b>
+          </p>
+        </div>
+        <h3>�&nbsp;ώς μπορείτε να αποκτήσετε το Osteflex;</h3>
+        <p>
+          <b>
+            Ιωάννα Κούτρα: “Μετά από αυτή τη συζήτηση με τον επικεφαλής των
+            φαρμακείων είναι προφανές ότι το Osteflex δεν θα πωληθεί ποτέ στα
+            φαρμακεία. Αλλά είναι δυνατόν να το βρεις κάπου, σωστά;”
+          </b>
+        </p>
+        <p>
+          <b> Έλενα Δημάδη:</b> “Ναι, όλοι οι Έλληνες πολίτες μπορούν να
+          παραγγείλουν το Osteflex μέσω Διαδικτύου απευθείας από τον
+          κατασκευαστή. Υπάρχουν πολλές εξαιρέσεις: ορισμένες περιοχές
+          κερδοσκοπούν υπερβολικά”.
+        </p>
+        <p>
+          <b>
+            Ιωάννα Κούτρα: “Γιατί είναι δυνατή η παραγγελία του Osteflex μόνο
+            μέσω Διαδικτύου;»
+          </b>
+        </p>
+        <p><b> Έλενα Δημάδη:</b> “Υπάρχουν τρεις λόγοι:</p>
+        <ul>
+          <li>
+            Εγγύηση ποιότητας. Το Osteflex αποστέλλεται στον κατασκευαστή από το
+            εργοστάσιο.
+          </li>
+          <li>
+            �&nbsp;ροστασία από μεσάζοντες. Αυτό βοηθά στην αποφυγή προσαυξήσεων.
+          </li>
+          <li>Άμεση παράδοση”.</li>
+        </ul>
+        <h3>�&nbsp;εριφερειακά επιδόματα για συνταξιούχους.</h3>
+        <p>
+          <b> Έλενα Δημάδη:</b> “Το πρόγραμμα του ταμείου κοινωνικής στήριξης
+          είναι πλέον διαθέσιμο σε όλες τις περιφέρειες. Χάρη σε αυτό το
+          πρόγραμμα, μπορείτε να παραγγείλετε το Osteflex με ΕΚ�&nbsp;ΤΩΣΗ 50%. Αυτό
+          υλοποιείται στο πλαίσιο ενός περιφερειακού προγράμματος πρόληψης
+          ασθενειών.
+        </p>
+        <p>
+          Οι πρώτοι που λαμβάνουν τα οφέλη είναι άτομα άνω των 47 ετών που ζουν
+          σε περιοχές σε δύσκολη επιδημιολογική κατάσταση.
+        </p>
+        <p>
+          Γι' αυτό συνιστώ ανεπιφύλακτα σε όλους όσους ζουν σε αυτές τις
+          περιοχές: μην χάνετε το χρόνο σας! Δεν θα έχετε άλλη ευκαιρία. Κανείς
+          δεν γνωρίζει πόσο καιρό θα είναι ενεργό το πρόγραμμα και πόσο το
+          Osteflex θα είναι διαθέσιμο”.
+        </p>
+        <h3>Αποκτήστε το <a href="#roulette"> Osteflex </a> τώρα αμέσως!</h3>
+        <p>
+          <b> Έλενα Δημάδη:</b> “Για να αποκτήσετε το Osteflex με έκπτωση στο
+          πλαίσιο του προγράμματος κοινωνικής στήριξης, συμμετάσχετε σε κλήρωση
+          και δώστε το όνομα και το τηλέφωνό σας στη φόρμα παραγγελίας και στη
+          συνέχεια πατήστε “Αποκτήστε το Osteflex”.
+        </p>
+        <p class="red" style="text-align: center">
+          <b>
+            �&nbsp;ροσοχή παρακαλώ! Μπορείτε να υποβάλετε μόνο ένα αίτημα για κάθε
+            αριθμό τηλεφώνου!
+          </b>
+        </p>
+        <p>
+          Τώρα, τα αιτήματα γίνονται δεκτά και διεκπεραιώνονται 24 ώρες το
+          24ωρο. Αλλά μάλλον θα πρέπει να περιμένετε λόγω μεγάλης ζήτησης”.
+        </p>
+        <p class="pg" style="
+            background: rgb(255, 236, 166) none repeat scroll 0% 0%;
+            padding: 20px;
+            border: 1px solid red;
+          ">
+          <b> ΕΝΗΜΕΡΩΣΗ|ΣΗΜΕΙΩΣΗ ΣΥΝΤΑΚΤΗ: </b><br>
+          Δεδομένου ότι έχουμε πολλές παραγγελίες πρέπει να περιορίσουμε την
+          ειδική προσφορά. <br>
+          �&nbsp;ρος το παρόν ισχύει μόνο η ειδική προσφορά
+          <b style="color: red"><span class="geo_city_2"></span></b> Μέχρι και
+          <b><span style="color: red">
+              <script>
+                date_rs(0);
+              </script>
+            </span></b>
+          Όσο ισχύει, μπορείτε να λάβετε το αυθεντικό προϊόν
+          <a href="#roulette" class="replace_ignoring"> “Osteflex”</a> μέσω
+          <a href="#roulette">κλήρωσης με τις παρακάτω εκπτώσεις</a>. Είναι για
+          όλους!
+          <br>
+          <b style="font-weight: bold"></b>
+        </p>
+        <div class="order_info">
+          <div id="counter_product">
+            Έκπτωση
+            <b><u><span>
+                  <script>
+                    date_rs(0);
+                  </script>
+                </span></u></b>
+            για τα υπόλοιπα κομμάτια σε πρόγραμμα με έκπτωση:
+            <div class="left_count">
+              <b class="prod_left_val">21</b> Κομμάτια
+            </div>
+          </div>
+        </div>
+
+        <center>
+          <div class="toscroll"></div>
+          <div class="ruletka-p" id="roulette">
+            <h2>�&nbsp;ΡΟΣΟΧΗ �&nbsp;ΑΡΑΚΑΛΩ! �&nbsp;ροσοχή στις απομιμήσεις!</h2>
+            <p>
+              Μπορείτε να παραλάβετε το προϊόν εντός της επικράτειας της Ελλάδα
+              <a href="#roulette" class="ruletka-a">
+                μόνο εάν συμμετέχετε σε κλήρωση με έκπτωση έως και 50%.
+              </a>
+            </p>
+          </div>
+          <div class="scroll-mob"></div>
+          <div class="spin-wrapper">
+            <p class="ruletka-p">
+              Δοκιμάστε την τύχη σας! <br>
+              Γυρίστε τον τροχό! �&nbsp;ροσπαθήστε να πάρετε το Osteflex
+              <span class="danger-text"> με έκπτωση 50%</span>!
+            </p>
+            <div class="wheel-wrapper">
+              <div class="wheel">
+                <div class="wheel-img">
+                  <img loading="lazy" alt="" class="wheel-img__pic" src="images/wheel.png">
+                  <div class="wheel-img__numbers"></div>
+                </div>
+                <div class="wheel-cursor preleadMetrica">
+                  <img loading="lazy" alt="" src="images/wheel-cursor.png">
+                  <span class="cursor-text lt48" onclick="spin();">
+                    ΓΥΡΝΑ
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order_block">
+            <div class="order_block_prod">
+              <img loading="lazy" src="images/tov.png" style="
+                  max-width: 100%;
+                  width: 200px;
+                  display: block;
+                  margin-right: auto;
+                  margin-left: auto;
+                ">
+              <div class="product-prices">
+                <span class="product__dicount"> Μεγάλη ευκαιρία! </span><br>
+                <span class="product__price old_price"> 78 € </span><br>
+                <span class="product__price new_price"> 39 € </span>
+              </div>
+            </div>
+            <h3>
+              Το μόνο που χρειάζεται είναι να εισάγετε το όνομα και τον αριθμό
+              τηλεφώνου σας. <br>
+              Βιαστείτε! Χρόνος που απομένει: <br>
+              <span class="time_remains" id="min">10</span> :
+              <span class="time_remains" id="sec">00</span>
+            </h3>
+
+            <script>
+              function delSpace(target) {
+                target.value = target.value.replaceAll(" ", "");
+              }
+
+              function disableFrom() {
+                document
+                  .querySelectorAll(".js_submit")
+                  .forEach((e) => e.setAttribute("disabled", true));
+              }
+            </script>
+            <style>
+              button:disabled,
+              button:disabled:hover,
+              button:disabled:focus {
+                opacity: 0.3;
+              }
+            </style>
+
+            <form id="order_form" action="/api/tl.php" method="post" onsubmit="disableFrom()">
+            <input name="oid" type="hidden" value="8567">
+    <input name="country_code" type="hidden" value="GR">
+    <input name="cid" type="hidden" value="">
+    <input name="sub_id_3" type="hidden" value="NM">
+
+              <div class="order_form_row">
+                <input type="text" class="input-roulette input-name" id="name" name="name" placeholder="Εισάγετε το όνομά σας" required="">
+                <div class="hint-input">Βίκυ Γιαλιού</div>
+              </div>
+              <div class="order_form_row">
+                <input type="tel" class="input-roulette" id="phone" name="phone" placeholder="Εισάγετε το τηλέφωνό σας" autocomplete="tel" required="">
+                <div class="hint-input">+30 XXX XXX XX XX</div>
+              </div>
+
+              <input type="submit" class="submit-roulette js_submit" value="Υποβολή">
+            </form>
+          </div>
+          <div class="spin-result-wrapper">
+            <div class="pop-up-window">
+              <div class="close-popup"></div>
+              <p class="ruletka-p pop-up-text">
+                Μπορείτε να αποκτήσετε το Osteflex
+                <span class="danger-text"></span> με έκπτωση 50%.
+              </p>
+              <a class="pop-up-button" href="#roulette"> OK </a>
+            </div>
+          </div>
+        </center>
+
+        <div class="box box-blue-light comments-block">Σχόλια</div>
+        <div class="vk-container">
+          <div class="vk-comment-load commScroll">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/kkom010.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Θωμάς Ηλιόπουλος</div>
+            <div class="vk-comment-text">
+              <p>
+                Είχα τρομερό πόνο στις αρθρώσεις. Επισκέφτηκα πολλούς γιατρούς
+                και ξόδεψα περίπου 10.000 € σε φαρμακεία, αλλά ο πόνος δεν
+                υποχώρησε. Τότε, ο φίλος μου έφερε ένα δωρεάν Osteflex. Είπε ότι
+                είχε πολύ καλά αποτελέσματα και το δοκιμάζω τώρα. Θα σας πω
+                αργότερα για τα αποτελέσματα.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-3);
+                </script>
+              </span>
+
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+
+          <div class="vk-comment-load" style="padding-left: 10%">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/kkom08.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Γιάννης Σταματίου</div>
+            <div class="vk-comment-text">
+              <p>
+                Οι γιατροί είναι άχρηστοι, συνεργάζονται με τα φαρμακεία για να
+                βγάζουν λεφτά!
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-2);
+                </script>
+              </span>
+
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+
+          <div class="vk-comment-load" style="padding-left: 10%">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/kkom010.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Οδυσσέας Μητρόπουλος</div>
+            <div class="vk-comment-text">
+              <p>Δεν θα αγοράζω τίποτα πια από τα φαρμακεία, δεν έχει νόημα!</p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-2);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+
+          <div class="vk-comment-load" style="padding-left: 10%">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/kkom08.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Νίκος �&nbsp;απαδόπουλος</div>
+            <div class="vk-comment-text">
+              <p>
+                Χρησιμοποιώ το Osteflex, είμαι πολύ ικανοποιημένος μέχρι
+                στιγμής. Δεν είναι διαφήμιση, απλά σας προτείνω να το
+                δοκιμάσετε.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-1);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm1.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Μαίρη Σιδέρη</div>
+            <div class="vk-comment-text">
+              <p>
+                Θα απέλυα όλους τους υπουργούς, λένε συνέχεια ψέματα και κάνουν
+                ό,τι τους λένε οι χορηγοί τους!!
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-3);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm02.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Σωκράτης Βλαστός</div>
+            <div class="vk-comment-text">
+              <p>
+                Δεν μπορώ να το πιστέψω, επιτέλους η Έλενα Δημάδη κάνει κάτι
+                χρήσιμο. Νομίζω ότι θα ακολουθήσω τη συμβουλή της και θα
+                παραγγείλω το Osteflex όσο είναι διαθέσιμο με έκπτωση.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-3);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/kari.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Κατερίνα Ηλιού</div>
+            <div class="vk-comment-text">
+              <p>Συμφωνώ! Αυτό το φάρμακο είναι πολύ αποτελεσματικό!</p>
+              <p></p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-3);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm04.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Αλίκη</div>
+            <div class="vk-comment-text">
+              <p>
+                �&nbsp;άσχω από αρθρίτιδα εδώ και χρόνια. Ο πόνος στα χέρια είναι τόσο
+                έντονος που δεν μπορώ να κάνω τις δουλειές του σπιτιού και δεν
+                μπορώ να φυτέψω τίποτα. Έχω ήδη δοκιμάσει πολλά φάρμακα, αλλά
+                ήταν άχρηστα, σπατάλησα μόνο τα χρήματά μου. Μου πήρε λίγο χρόνο
+                για να ετοιμαστώ, αλλά τελικά γύρισα τον τροχό και κέρδισα
+                έκπτωση 40%. <span class="geo_city_2"></span> Όπως και να ΄χει,
+                παρήγγειλα το Osteflex. Το έλαβα από το ταχυδρομείο. Το δοκίμασα
+                χθες - νιώθω καλύτερα τώρα. Δεν το έχω πάρει ακόμα σήμερα, αλλά
+                θα το κάνω σύντομα.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-3);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm03.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Μαργαρίτα Σοφιανού</div>
+            <div class="vk-comment-text">
+              <p>
+                Είναι πολύ καλό, βοήθησε τον άντρα μου να ανακουφίσει τον πόνο.
+                Ετοιμαζόταν για ψάρεμα και ξαφνικά ένιωσε πόνους στην πλάτη. Η
+                αδερφή του είχε το Osteflex, το είχε παραγγείλει στο Διαδίκτυο.
+                Το πρωί δεν πονούσε και πήγε για ψάρεμα.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-3);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm05.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Σταυρούλα Μητίδη</div>
+            <div class="vk-comment-text">
+              <p>
+                Εμφάνισε κανείς αλλεργία; Έχω συχνά προβλήματα με τα φάρμακα και
+                ο πόνος στην πλάτη είναι ένα πρόβλημα εδώ και πολύ καιρό…
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-2);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm03.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Μαργαρίτα Σοφιανού</div>
+            <div class="vk-comment-text">
+              <p>
+                Σταυρούλα, η φόρμουλα είναι απολύτως φυσική, υπάρχουν κυρίως
+                εκχυλίσματα και κέρας ελαφιού μαράλ. Εάν δεν έχεις πρόβλημα με
+                τα φυσικά φάρμακα, είναι μια εξαιρετική επιλογή!
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-2);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm06.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Λουίζα Μουτίδη</div>
+            <div class="vk-comment-text">
+              <p>
+                Κι εγώ κάτι άκουσα για αυτό. Κάποιοι φίλοι μου το παρήγγειλαν.
+                Έχω προβλήματα εδώ και δύο χρόνια. Όταν διάβασα όλα αυτά, ένιωσα
+                άβολα. Θα το παραγγείλω και θα το δοκιμάσω.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-2);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm07.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Άννα Σαράφη</div>
+            <div class="vk-comment-text">
+              <p>
+                Ευχαριστώ. Χωρίς εσάς, δεν θα πίστευα στην αποτελεσματικότητα
+                αυτού του προϊόντος! Ο σύζυγός μου υπέφερε πολύ, και τώρα είναι
+                τόσο δραστήριος σαν να έγινε ξανά 18 ετών.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-2);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm08.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Μιχάλης Ιακώβου</div>
+            <div class="vk-comment-text">
+              <p>
+                Το παρήγγειλα από την επίσημη ιστοσελίδα. Βοήθησε πολύ. Εάν
+                έχετε προβλήματα στις αρθρώσεις, μην διστάσετε να το δοκιμάσετε,
+                ο πόνος θα φύγει. Το παραδίδουν γρήγορα – το έλαβα μόλις σε 3
+                ημέρες.
+              </p>
+              <img src="images/o1.jpg" loading="lazy" style="max-width:400px;width: 100%;" alt="">
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-2);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm09.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Ντέμη Λάμη</div>
+            <div class="vk-comment-text">
+              <p>
+                �&nbsp;άντα πιστεύω την Έλενα Δημάδη, τα σόου της με έσωσαν πολλές
+                φορές! Τι κάνει όμως το Osteflex καλύτερο από τα κανονικά
+                φάρμακα που είναι διαθέσιμα σε οποιαδήποτε κλινική;
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-2);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm06.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Μαρίνα Καραγιώργη</div>
+            <div class="vk-comment-text">
+              <p>
+                Το ζητούμενο είναι τα φυσικά συστατικά που δεν θα βλάψουν το
+                σώμα σας. Ταυτόχρονα, το Osteflex διεγείρει τα αποθέματα του
+                σώματος, βάζοντάς τα σε κατάσταση αυτο-αποκατάστασης. Αυτή είναι
+                μια καινοτόμος προσέγγιση και δεν ξέρουν όλες οι φαρμακευτικές
+                εταιρείες πώς να τη διεργαστούν μέχρι στιγμής, καθώς η
+                τεχνολογία είναι ακριβή. Το Osteflex περιέχει αυτή την τέλεια
+                φόρμουλα.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-1);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm10.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Αμαλία Σκλάβου</div>
+            <div class="vk-comment-text">
+              <p>
+                Ο γιατρός μου μου είπε για το Osteflex, αλλά δεν απάντησε
+                απευθείας στις ερωτήσεις μου. Είπε ότι δύσκολα θα το έβρισκα,
+                αλλά αν το έβρισκα, όλα θα ήταν καλά… Γενικά, φαίνεται ότι δεν
+                επιτρέπεται να το πουλήσουν, πολλοί θέλουν να κάνουν τον κόσμο
+                να αγοράζει ακριβές ξένες αλοιφές.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-1);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm11.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Βάσω Μαγγανά</div>
+            <div class="vk-comment-text">
+              <p>
+                Υπέροχο προϊόν! Ήμουν αθλήτρια, και τα τραύματά μου είχαν
+                επιπτώσεις. Αλλά το Osteflex βελτίωσε την υγεία μου πολύ
+                γρήγορα. Θα ζήσω μια καλή ζωή!
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-1);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm12.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Ελισάβετ Γεωργίου</div>
+            <div class="vk-comment-text">
+              <p>
+                Συμμετείχα σε κλήρωση και κέρδισα έκπτωση 50%! Δεν είχα κερδίσει
+                ποτέ τίποτα στη ζωή μου. �&nbsp;άσχω από αρθρίτιδα εδώ και 5 χρόνια,
+                σπατάλησα τόνους λεφτά. Αλλά το
+                <a href="#roulette"> Osteflex </a> με βοήθησε πραγματικά, μείωσε
+                τον πόνο μέσα σε αρκετές ημέρες, ανακούφισε τη φλεγμονή και το
+                πρήξιμο. Τώρα, κοιτάξτε τι κάνω! Μπορούσα να κινούμαι δύσκολα
+                σαν γριά, και τώρα είμαι μια ενεργή συνταξιούχος!
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-1);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm13.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Ελπίδα Ονισιφόρου</div>
+            <div class="vk-comment-text">
+              <p>
+                Τα πας περίφημα! Εγώ είμαι ακόμη ξάπλα και παίρνω χάπια που μου
+                προκαλούν φοβερές καούρες… Δεν μπορώ να κοιμηθώ το βράδυ.
+                Συμμετείχα και εγώ σε κλήρωση, κέρδισα έκπτωση και τώρα περιμένω
+                το <a href="#roulette">Osteflex</a>.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-1);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm1288.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Δαμιανός Σταμούλης</div>
+            <div class="vk-comment-text">
+              <p>
+                Γειά. Χρησιμοποίησα το <a href="#roulette"> Osteflex </a>
+                για 3 εβδομάδες. Ο πόνος στο γόνατο έχει φύγει, έγινα πιο
+                δραστήριος, είμαι χαρούμενος και έχω πολλή ενέργεια, κάνω
+                αθλήματα σε εξωτερικούς χώρους και θέλω να ζήσω μέχρι τα 100
+                μου.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-1);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm14.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Ειρήνη �&nbsp;αππά</div>
+            <div class="vk-comment-text">
+              <p>
+                Το προϊόν είναι καλό, βοήθησε τη μαμά μου που υπέφερε από πόνους
+                στην πλάτη και στα γόνατα από παλιά. Η μαμά μου άρχισε να
+                τριγυρνάει στο διαμέρισμα, χωρίς να παραπονιέται για πόνους.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(-1);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm1808.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Βικτόρια Ευαγγέλου</div>
+            <div class="vk-comment-text">
+              <p>
+                Ξέρεις, γνωρίζω για τη δύναμη των κεράτων από πολύ παλιά. Η
+                γιαγιά μου μαγείρευε σούπα με αυτά και μετά φορούσε ένα μάλλινο
+                κασκόλ. Ο παππούς μου χρησιμοποιούσε την ίδια μέθοδο, δεν ξέρω
+                πού έβρισκαν κέρατα… ω, πιστεύω ότι το φάρμακο είναι ισχυρό –
+                δεν είναι περίεργο, ρίξε μια ματιά στη φόρμουλα.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load commScroll">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm15.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Ρίτα Αγγέλου</div>
+            <div class="vk-comment-text">
+              <p>
+                Οι φυσικές λύσεις είναι οι καλύτερες! Έκαψα τον ουρανίσκο μου με
+                τα χάπια. Διορθώνουν κάτι και χαλάνε κάτι άλλο. Είναι καλό που η
+                επίσημη ιατρική στράφηκε και στα βότανα.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm16.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Αθηνά Τσίκη</div>
+            <div class="vk-comment-text">
+              <p>
+                �&nbsp;ρέπει να ντρέπονται! Το προϊόν είναι πολύ καλό, αλλά δεν το
+                αφήνουν να μπει στα φαρμακεία! Θέλουν μόνο να βγάλουν λεφτά πάνω
+                στην υγεία των συνταξιούχων! Ανάθεμά τους, αχόρταγοι
+                μπουρζουάδες!
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm17.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">�&nbsp;αρασκευή Λιανού</div>
+            <div class="vk-comment-text">
+              <p>
+                Μόλις το παρήγγειλα, πρέπει να το παραδώσουν σε τρεις μέρες.
+                Ανυπομονώ.
+              </p>
+              <p></p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm18.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Αγάπη Νάκου</div>
+            <div class="vk-comment-text">
+              <p>
+                Το παρήγγειλα και το παρέλαβα χθες με το ταχυδρομείο. Δεν
+                πίστευα ότι θα το έκαναν, αλλά παρέδωσαν τα πάντα σύμφωνα με την
+                ειδική προσφορά. Το χρησιμοποίησα το βράδυ και άρχισα να νιώθω
+                πολύ καλύτερα. Θα συνεχίσω να το χρησιμοποιώ.
+              </p>
+              <img src="images/o2.jpg" loading="lazy" style="max-width:400px;width: 100%;" alt="">
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm19.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Γιώτα Θεοδωρίδου</div>
+            <div class="vk-comment-text">
+              <p>
+                Διάβασα ένα άρθρο, έλεγε ότι μια αποτελεσματική θεραπεία
+                αποσύρθηκε από τα φαρμακεία. Το άρθρο αφορούσε το Osteflex.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm20.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Μικαέλα Θωμά</div>
+            <div class="vk-comment-text">
+              <p>
+                Τόσες πολλές καλές κριτικές! Θα το παραγγείλω για τους γονείς
+                μου! Ευχαριστώ!
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/koom21.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Ιάκωβος Γρηγορίου</div>
+            <div class="vk-comment-text">
+              <p>
+                Για να είμαι ειλικρινής, δεν εμπιστεύομαι και πολύ τις
+                διαφημίσεις στο Διαδίκτυο και δεν πίστευα πραγματικά στο
+                Osteflex, αλλά αποφάσισα να το δοκιμάσω. Το αποτέλεσμα ήταν
+                εκπληκτικό και δεν άργησε να έρθει. Το αγαπώ πολύ. Έχω
+                αρθρίτιδα, οστεοχόνδρωση και πρόπτωση.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm23.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">�&nbsp;αύλος Σεραφειμίδης</div>
+            <div class="vk-comment-text">
+              <p>�&nbsp;ώς να το παραγγείλω για να αποφύγω τις απομιμήσεις;</p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm24.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Χρύσα �&nbsp;αρλιάρου</div>
+            <div class="vk-comment-text">
+              <p>
+                Υπάρχουν δεκάδες απομιμήσεις! Θα πρέπει να το αγοράσετε μόνο
+                εδώ!
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm25.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">�&nbsp;έτρος Σωτηρόπουλος</div>
+            <div class="vk-comment-text">
+              <p>
+                Είναι υπέροχο που το δημιούργησαν στη χώρα μας κι όχι στο
+                εξωτερικό. Διαφορετικά, θα ήταν πολύ ακριβό.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm26.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Ντίνα Δρακοπούλου</div>
+            <div class="vk-comment-text">
+              <p>
+                Το παρήγγειλα για τη μαμά μου. Μας τηλεφώνησε ένας κούριερ και
+                είπε ότι θα μας το παραδώσει αύριο. Η μητέρα μου λατρεύει να
+                παρακολουθεί εκπομπές της Έλενας Δημάδη και θα ενθουσιαστεί αν
+                μάθει ότι η Έλενα συνέστησε αυτό το προϊόν! Θα γράψω για τις
+                εντυπώσεις μας αργότερα.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm27.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Μαρία �&nbsp;άνα</div>
+            <div class="vk-comment-text">
+              <p>
+                �&nbsp;άντα υπέφερα και πίστευα ότι δεν θα απαλλαγώ από τον πόνο στις
+                αρθρώσεις και θα πεθάνω μαζί του. Τώρα, νομίζω ότι το Osteflex
+                θα με βοηθήσει, τουλάχιστον, όλοι εδώ λένε ότι βοηθάει.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm28.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Λίζα Γκεράκου</div>
+            <div class="vk-comment-text">
+              <p>
+                Ήξερα για το <a href="#roulette">Osteflex</a>. Υπήρχε ένα φόρουμ
+                όπου μπορούσες να κάνεις ερωτήσεις στους γιατρούς, όπου είχα
+                ρωτήσει μια ρευματολόγο που με συμβούλευε διαδικτυακά και μου
+                είπε για αυτό. Αλλά δεν το βρήκα σε φαρμακείο. Είναι καλό που
+                τώρα μπορούμε να συμμετάσχουμε σε κλήρωση και να κερδίσουμε
+                έκπτωση!
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm29.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Θάλεια</div>
+            <div class="vk-comment-text">
+              <p>
+                Είναι καλή γιατρός, είναι σαν τον Δρ. Χάουζ! �&nbsp;ρέπει να θυμάμαι
+                την ονομασία του – θα το πάω στους παππούδες μου στο χωριό το
+                καλοκαίρι.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm30.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Μαντώ Ζαφείρη</div>
+            <div class="vk-comment-text">
+              <p>
+                Ο φίλος μου πουλάει το “Osteflex” στο ιδιωτικό του φαρμακείο σε
+                τεράστια τιμή, γι' αυτό και δεν το έχω αγοράσει για πολύ καιρό.
+                Εδώ, είδα μια ειδική προσφορά και το παρήγγειλα αμέσως!
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm31.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Σουζάνα Γεωργαντά</div>
+            <div class="vk-comment-text">
+              <p>
+                Το παρήγγειλα για μένα – υπέφερα για πολλά χρόνια. Το “Osteflex”
+                με βοήθησε μέσα σε μερικές εβδομάδες. Δεν πίστευα καν ότι ήταν
+                δυνατό.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm32.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Γιάννης Θεοδωρίδης</div>
+            <div class="vk-comment-text">
+              <p>Ο ιστότοπος προσφέρει εκπτώσεις έως και 50%, είναι αλήθεια;</p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm33.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Τρύφωνας Μποζάς</div>
+            <div class="vk-comment-text">
+              <p>
+                Αν το προϊόν είναι τόσο καλό όσο το περιγράφουν, θα είναι
+                σωτήριο. Έχω προβλήματα στις αρθρώσεις εδώ και πολλά χρόνια και
+                αλλεργία στα περισσότερα φάρμακα.
+              </p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/koomm34.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Λιλίκα Μάνου</div>
+            <div class="vk-comment-text">
+              <p>Το έχω ήδη παραγγείλει για τη μαμά μου! Ευχαριστώ!</p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm35.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Στεφανία Μαυρίδη</div>
+            <div class="vk-comment-text">
+              <p>
+                Διατηρώ πάντα το Osteflex στο σπιτικό μου φαρμακείο. Η πρόληψη
+                είναι καλύτερη από το αναπηρικό καροτσάκι.
+              </p>
+              <img src="images/o3.jpg" loading="lazy" style="max-width:400px;width: 100%;" alt="">
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+          <div class="vk-comment-load commScroll">
+            <div class="vk-avatar">
+              <img loading="lazy" src="images/komm36.jpg" width="48px" height="48px">
+            </div>
+            <div class="vk-comment-name">Ισμήνη Λαιμού</div>
+            <div class="vk-comment-text">
+              <p>Ελπίζω ο Θεός να δώσει σε όλους μας την υγειά μας!</p>
+            </div>
+            <div class="vk-comment-date">
+              <span>
+                <script>
+                  date_rs(0);
+                </script>
+              </span>
+              |
+              <a href="#roulette"><span style="cursor: pointer"> Σχόλιο </span></a>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <a href="#roulette" class="olink ord_button">
+            �&nbsp;αραγγείλτε το “Osteflex”
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <!-- START body:end --><style type="text/css" media="all">
+  @import url("css/1arrowStyle.css");
+</style>
+<script type="text/javascript">
+  const arrowInSite = document.createElement("div");
+  arrowInSite.className = "arrow-down linkClickedObjective";
+  arrowInSite.id = "arrow-down";
+
+  const arrowSnippetUp = document.createElement("div");
+  arrowSnippetUp.className = "snippetArrow snippetArrow-up";
+
+  const arrowSnippetDown = document.createElement("div");
+  arrowSnippetDown.className = "snippetArrow snippetArrow-down";
+
+  arrowInSite.append(arrowSnippetUp);
+  arrowInSite.append(arrowSnippetDown);
+
+  document.body.append(arrowInSite);
+
+  url = new URL(window.location.href);
+  const arrow_pix = url.searchParams.get("arrow_pix");
+  const arrow_delay = url.searchParams.get("arrow_delay");
+  const arrowDown = document.getElementById("arrow-down");
+  let TIMEOUT = 1000;
+  let stopInterval = false;
+  let countScrolled = 0;
+  let delayCalculatePosition = 1000;
+
+  if (arrow_delay) {
+    TIMEOUT = arrow_delay;
+  }
+
+  const scrollHeight =
+    Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.clientHeight,
+      document.documentElement.clientHeight
+    ) * 0.9;
+
+  function showArrow() {
+    arrowDown.style.display = "block";
+    window.removeEventListener("scroll", windowScrollListener);
+    window.removeEventListener("touchmove", windowScrollListener);
+  }
+
+  function hideArrow() {
+    arrowDown.style.display = "none";
+    window.removeEventListener("scroll", windowScrollListener);
+    window.removeEventListener("touchmove", windowScrollListener);
+  }
+
+  hideArrow();
+
+  let heightToScroll = screen.height;
+
+  function scrollTop() {
+    hideArrow();
+    window.scrollTo({
+      top: window.scrollY + heightToScroll,
+      behavior: "smooth"
+    });
+  }
+
+  arrowDown.addEventListener("click", scrollTop);
+  let currentPos = window.scrollY;
+
+  function windowScrollListener() {
+    let prevPos = window.scrollY;
+    let int = setInterval(() => {
+      currentPos = window.scrollY;
+      if (currentPos >= arrow_pix && prevPos === currentPos) {
+        showArrow();
+        stopInterval = true;
+      }
+
+      if (currentPos >= scrollHeight && arrow_pix < scrollHeight) {
+        clearInterval(int);
+        hideArrow();
+      }
+
+      if (stopInterval) {
+        clearInterval(int);
+        setTimeout(() => {
+          let startPosition = window.scrollY;
+          window.addEventListener("scroll", () => {
+            finishPos = window.scrollY;
+            if (finishPos - startPosition >= 200) {
+              hideArrow();
+            }
+          });
+          window.addEventListener("touchstart", startPosTouch);
+          window.addEventListener("touchend", finishPosTouch);
+        }, delayCalculatePosition);
+      }
+    }, TIMEOUT);
+  }
+
+  window.addEventListener("scroll", windowScrollListener);
+  window.addEventListener("touchmove", windowScrollListener);
+
+  if (arrow_pix === 0) {
+    showArrow();
+  }
+
+  document.querySelectorAll("a").forEach((el) => {
+    el.addEventListener("click", hideArrow);
+  });
+  document.querySelectorAll("button").forEach((el) => {
+    el.addEventListener("click", hideArrow);
+  });
+
+  if (!arrow_pix) {
+    hideArrow();
+  }
+
+
+  let startPos = (finishPos = 0);
+
+  function startPosTouch() {
+    startPos = window.scrollY;
+  }
+
+  function finishPosTouch() {
+    finishPos = window.scrollY;
+    if (finishPos > startPos) {
+      countScrolled++;
+      if (countScrolled >= 2) {
+        hideArrow();
+      }
+    }
+
+    if (finishPos - startPos >= 200) {
+      hideArrow();
+    }
+  }
+</script><script type="text/javascript"> 
+class LeadForm {
+  constructor() {
+    this.links = Array.from(document.querySelectorAll('a[href^="#"]'));
+    this.leadform = null;
+    this.wrapperElements = null;
+    this.maxTopPosition = 1000000;
+    this.maxBottomPosition = -1000000;
+    this.delayUpdateLeadForm = 105;
+  }
+
+  //Get the most frequently encountered anchor element
+  #getMaxLinkInPage() {
+    const countHref = new Map();
+
+    // Filter and count occurrences of href
+    this.links.forEach((link) => {
+      if (
+        link.hasAttribute("href") &&
+        link.getAttribute("href").startsWith("#")
+      ) {
+        const href = link.getAttribute("href");
+        countHref.set(href, (countHref.get(href) || 0) + 1);
+      }
+    });
+
+    // Find the href with the maximum count
+    let maxHref = "";
+    let maxCount = 0;
+    for (const [href, count] of countHref.entries()) {
+      if (count > maxCount) {
+        maxCount = count;
+        maxHref = href;
+      }
+    }
+
+    if (maxCount === 1) maxHref = false;
+    // Return the element corresponding to the most frequent href, if it exists
+    return maxHref ? document.getElementById(maxHref.substring(1)) : false;
+  }
+
+  //Get the highest and lowest coordinates of the elements that have the wrapper class
+  #getWrapperElement() {
+    const elements = [...document.querySelectorAll("[class*=wrapper]")].filter(
+      (elem) => {
+        if (
+          (elem.classList.value.indexOf("spin") !== -1 ||
+            elem.classList.value.indexOf("door") !== -1 ||
+            elem.classList.value.indexOf("wheel") !== -1) &&
+          elem.getBoundingClientRect().top !== 0
+        )
+          return true;
+      }
+    );
+    const forms = [...document.querySelectorAll("form")].filter((form) =>
+      form.querySelector('input[name="phone"]')
+    );
+    if (forms.length === 0 && elements.length === 0) {
+      if (document.querySelectorAll(".preleadMetrica").length === 0) {
+        return [];
+      }
+      return document.querySelectorAll(".preleadMetrica");
+    }
+    return forms.length > 0 ? elements.concat(forms[0]) : elements;
+  }
+
+  // Update the coordinates of the wrapper elements
+  #remakeAndGetWrapper(wrapperElements) {
+    if (wrapperElements.length === 0) return [];
+    let maxTop = this.maxTopPosition;
+    let maxBottom = this.maxBottomPosition;
+
+    //if the wrapper Elements is not empty, then there is no anchor element, then you need to find the coordinates of the wrapper element
+    wrapperElements.forEach((elem) => {
+      let rect = elem.getBoundingClientRect();
+      if (rect.top !== 0 && maxTop > rect.top) maxTop = rect.top;
+      if (rect.bottom !== 0 && maxBottom < rect.bottom) maxBottom = rect.bottom;
+    });
+    return {
+      getBoundingClientRect: () => ({
+        y: maxTop,
+        height: maxBottom - maxTop,
+        top: maxTop,
+        bottom: maxBottom,
+      }),
+    };
+  }
+
+  getLeadForm() {
+    if (this.wrapperElements)
+      this.leadform = this.#remakeAndGetWrapper(this.wrapperElements);
+    return this.leadform;
+  }
+
+  initialization() {
+    let hrefElem = this.#getMaxLinkInPage();
+    if (hrefElem) {
+      this.leadform = hrefElem;
+    } else {
+      this.wrapperElements = this.#getWrapperElement();
+      this.leadform = this.#remakeAndGetWrapper(this.wrapperElements);
+    }
+    return this.leadform;
+  }
+}
+
+</script><script type="text/javascript">
+class TimerMetric {
+  static longVisit = true;
+  static delayCheckLongVisit = 0;
+  static timerLongVisit;
+  static sendLongVisit = true;
+
+  static checkElementTimer = true;
+  static elementsTimer = new LeadForm();
+
+  constructor(delayCheckLongVisit = 360) {
+    TimerMetric.delayCheckLongVisit = delayCheckLongVisit;
+  }
+
+  static checkLongVisitScroll() {
+    let elementTimer = TimerMetric.elementsTimer.initialization();
+    if (elementTimer.length !== 0) {
+      if (
+        elementTimer.getBoundingClientRect().y <= window.innerHeight &&
+        TimerMetric.longVisit
+      ) {
+        TimerMetric.checkLongVisit();
+      }
+    }
+  }
+
+  static checkLongVisit() {
+    if (TimerMetric.longVisit && TimerMetric.sendLongVisit) {
+      if (Config.debugMetric)
+        console.log(
+          "Start check long visit!",
+          new Date().getMinutes(),
+          new Date().getSeconds()
+        );
+      TimerMetric.timerLongVisit = setTimeout(() => {
+        if (Config.debugMetric)
+          console.log(
+            "time finish - ",
+            new Date().getMinutes(),
+            new Date().getSeconds()
+          );
+        Config.debugAndSend(Config.metric.longVisit, Config.SEND_TRUE);
+        TimerMetric.sendLongVisit = false;
+      }, TimerMetric.delayCheckLongVisit * 1000);
+
+      TimerMetric.longVisit = false;
+    }
+  }
+
+  getMetric() {
+    TimerMetric.elementsTimer.initialization();
+    window.addEventListener("scroll", () => {
+      let elementTimer = TimerMetric.elementsTimer.getLeadForm();
+      if (elementTimer.length !== 0) {
+        if (
+          elementTimer.getBoundingClientRect().y < window.innerHeight &&
+          TimerMetric.checkElementTimer &&
+          elementTimer.getBoundingClientRect().y >
+            -elementTimer.getBoundingClientRect().height
+        ) {
+          TimerMetric.checkElementTimer = false;
+          TimerMetric.checkLongVisit();
+        }
+
+        if (
+          elementTimer.getBoundingClientRect().y > window.innerHeight ||
+          elementTimer.getBoundingClientRect().y <
+            -elementTimer.getBoundingClientRect().height
+        ) {
+          TimerMetric.checkElementTimer = true;
+        }
+      }
+    });
+
+    window.addEventListener("load", () => {
+      TimerMetric.checkLongVisitScroll();
+    });
+  }
+}
+
+</script><script type="text/javascript">
+  class FormMetric {
+  sendMetric = Config.sendMetric;
+  debugMetric = Config.debugMetric;
+
+  //массив отвечающий за первый ввод в input (name,phone соответственно)
+  onFocus = [true, true];
+
+  metricaInputsName = document.querySelectorAll('input[name="name"]');
+  metricaInputsPhone = document.querySelectorAll('input[name="phone"]');
+  metricaPreleads = document.querySelectorAll(".preleadMetrica");
+  metricaSubmits = [...Array.from(document.querySelectorAll("input[type=submit]")),...Array.from(document.querySelectorAll("button[type=submit]"))];
+
+  inputsMetrica(input, index, nameMetrica) {
+    input.forEach((inp) => {
+      inp.addEventListener("input", () => {
+        if (this.onFocus[index]) {
+          this.onFocus[index] = false;
+          Config.debugAndSend(nameMetrica, Config.SEND_TRUE);
+        }
+      });
+
+      inp.addEventListener("blur", () => {
+        this.onFocus[index] = true;
+      });
+    });
+  }
+
+  getMetric() {
+    this.inputsMetrica(this.metricaInputsName, 0, Config.metric.inputName);
+    this.inputsMetrica(this.metricaInputsPhone, 1, Config.metric.inputPhone);
+
+    this.metricaSubmits.forEach((submit) => {
+      submit.addEventListener("click", () => {
+        Config.debugAndSend(Config.metric.leadMetrica, Config.SEND_TRUE);
+      });
+    });
+
+    //Если на сайте нет pre-lead форм (спины, двери, угадайки и т.п.), то нужно предварительно проверить это иначе выдаст ошибку
+    if (this.metricaPreleads) {
+      this.metricaPreleads.forEach((prelead) => {
+        prelead.addEventListener("click", (event) => {
+          Config.debugAndSend(Config.metric.metricaPreleads, event.clientY);
+        });
+      });
+    }
+  }
+}
+
+</script><script type="text/javascript">
+  class InteractiveClick {
+    sendMetric = Config.sendMetric;
+    debugMetric = Config.debugMetric;
+
+    interactiveItemsList = [
+      ...Array.from(document.getElementsByTagName("a")),
+      ...Array.from(document.getElementsByTagName("button")),
+      ...Array.from(document.getElementsByTagName("img")),
+      ...Array.from(document.querySelectorAll(".linkClickedObjective")),
+    ];
+
+    getMetric() {
+      this.interactiveItemsList.forEach((item) => {
+        if (
+          item.tagName === "IMG" &&
+          (item.parentElement.tagName === "A" ||
+            item.parentElement.tagName === "BUTTON")
+        ) {} else {
+          item.addEventListener("click", (event) => {
+            if (
+              event.target.tagName === "A" ||
+              event.target.parentNode.id === "arrow-down" ||
+              event.target.tagName === "IMG" ||
+              event.target.tagName === "BUTTON" ||
+              item.classList.contains("linkClickedObjective")
+            ) {
+              Config.debugAndSend(Config.metric.linkClicked, event.clientY);
+            }
+          });
+        }
+      });
+    }
+  }
+</script><script type="text/javascript"> 
+class OtherMetric {
+  sendMetric = Config.sendMetric;
+  debugMetric = Config.debugMetric;
+
+  leftToPageStart = null;
+  hasMouseSupport = window.matchMedia("(pointer:fine)").matches;
+
+  constructor(metricName) {
+    this.metricName = metricName;
+  }
+
+  leftToPage() {
+    document.addEventListener("visibilitychange", function logData() {
+      if (document.visibilityState === "hidden") {
+        this.leftToPageStart = Date.now();
+        try {
+          clearInterval(TimerMetric.timerLongVisit);
+          TimerMetric.longVisit = true;
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      if (document.visibilityState === "visible") {
+        this.leftToPageStart &&
+          Config.debugAndSend(
+            Config.metric.leftToPage,
+            Math.floor((Date.now() - this.leftToPageStart) / 1000)
+          );
+        try {
+          TimerMetric.longVisit = true;
+          TimerMetric.checkLongVisitScroll();
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    });
+  }
+
+  getMediaDevice() {
+    let md = navigator.mediaDevices;
+    if (md && md.enumerateDevices) {
+      md.enumerateDevices()
+        .then((devices) => {
+          if (devices.some((device) => "videoinput" === device.kind)) {
+            Config.debugAndSend(Config.metric.hasCamera, Config.SEND_TRUE);
+          }
+          if (devices.some((device) => "audioinput" === device.kind)) {
+            Config.debugAndSend(Config.metric.hasMicrophone, Config.SEND_TRUE);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }
+
+  getCharge() {
+    if (
+      navigator.userAgent.match(/Android/i) ||
+      navigator.userAgent.match(/webOS/i) ||
+      navigator.userAgent.match(/iPhone/i) ||
+      navigator.userAgent.match(/iPad/i) ||
+      navigator.userAgent.match(/iPod/i) ||
+      navigator.userAgent.match(/BlackBerry/i) ||
+      navigator.userAgent.match(/Windows Phone/i)
+    ) {
+      if (Config.debugMetric) console.log("it`s a phone");
+      navigator
+        .getBattery()
+        .then(function (battery) {
+          let batteryLevel = battery.level * 100;
+          Config.debugAndSend(Config.metric.batteryLevel, batteryLevel);
+          if (battery.charging)
+            Config.debugAndSend(Config.metric.charging, Config.SEND_TRUE);
+        })
+        .catch(function (e) {
+          console.error(e);
+        });
+    }
+  }
+
+  checkInvisibleButton() {
+    let invisibleButtons = document.querySelectorAll(".invisibleButton");
+    if (invisibleButtons)
+      invisibleButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          Config.debugAndSend(Config.metric.invisibleButton, Config.SEND_TRUE);
+        });
+      });
+  }
+
+  addInvisibleButton() {
+    let divContainer = document.createElement("div");
+    for (let i = 0; i < 2; i++) {
+      let btn = document.createElement("button");
+
+      Config.debugMetric
+        ? (btn.style = "font-size: 8px; opacity:1;")
+        : (btn.style = "font-size: 8px; opacity:0;");
+      btn.classList.add("invisibleButton");
+      i === 0 ? (btn.innerHTML = "Заказать") : (btn.innerHTML = "Order");
+      divContainer.append(btn);
+    }
+    document.body.prepend(divContainer);
+    if (divContainer.getBoundingClientRect().top > 0) {
+      let y = -divContainer.getBoundingClientRect().top;
+      divContainer.style = `position: absolute; z-index: 10000; display: flex; width: 100%; justify-content: center; gap: 10px;transform: translateY(${y}px);`;
+    }
+    divContainer.style = `position: absolute; z-index: 10000; display: flex; width: 100%; justify-content: center; gap: 10px;`;
+  }
+
+  getMetric() {
+    this.addInvisibleButton();
+    this.checkInvisibleButton();
+    if (this.hasMouseSupport) {
+      Config.debugAndSend(Config.metric.mouseSupported, Config.SEND_TRUE);
+    }
+
+    Config.debugAndSend(
+      Config.metric.timeDevice,
+      Math.floor(Date.now() / 1000)
+    );
+    this.leftToPage();
+    this.getMediaDevice();
+    // this.getCharge();
+  }
+}
+
+</script> <script type="text/javascript">
+class ObjectScroll {
+  coordinates = { top: null, bottom: null, height: null };
+  coordinatesSend = null;
+  isFirstCoord = true;
+  onDisplay = {
+    forward: false,
+    back: false,
+    forwardAnchor: false,
+    backAnchor: false,
+  };
+
+  sendScrollY = null;
+
+  constructor(nameObjective, objective, index) {
+    this.nameObjective = nameObjective;
+    this.objective = objective;
+    this.index = index;
+  }
+
+  #sendNameObjective(direction, anchor) {
+    let name = Config.getScrollName(
+      this.nameObjective,
+      direction,
+      anchor,
+      this.index
+    );
+    Config.debugAndSend(name, this.coordinatesSend);
+  }
+
+  //we get the coordinates of the element
+  #getCoordinates() {
+    let rect =
+      this.nameObjective === "leadform"
+        ? this.objective.initialization().getBoundingClientRect()
+        : this.objective.getBoundingClientRect();
+
+    if(this.isFirstCoord) this.coordinatesSend = rect.top+ window.scrollY;
+        this.isFirstCoord = false;
+    return { top: rect.top, bottom: rect.bottom, height: rect.height };
+  }
+
+  //checking if there is an item on the screen at the moment
+  checkVisitedDisplay(direction, isVisit, isAnchor) {
+    //if the element is on the screen and it has not been here before, then raise the appropriate flag
+    const isVisible =
+      this.coordinates.top < window.innerHeight && this.coordinates.bottom > 0;
+    const isOutOfView =
+      this.coordinates.top > window.innerHeight || this.coordinates.bottom < 0;
+
+    if (isVisible && !isVisit) {
+      this.#sendNameObjective(direction, isAnchor ? true : false);
+      this.onDisplay[direction === "down" ? "forward" : "back"] = true;
+    }
+    //if the element is off the screen, then raise the flag that the element is on the screen
+    if (isOutOfView)
+      this.onDisplay[direction === "down" ? "forward" : "back"] = false;
+  }
+
+  checkObjectOnDisplay(isScrollingDown, isAtAnchor) {
+    this.coordinates = this.#getCoordinates();
+    let direction = isScrollingDown ? "down" : "back";
+    let wasVisited = isScrollingDown
+      ? this.onDisplay.forward
+      : this.onDisplay.back;
+    this.checkVisitedDisplay(direction, wasVisited, isAtAnchor);
+  }
+}
+</script> <script type="text/javascript">
+  class NewScrollMetrica {
+    objectivesScrollSort = [];
+
+    initialization() {
+      this.scrolled = false;
+      this.endPos = 0;
+      this.firstLoading = true;
+      this.loadPositionY = 0;
+
+      this.lastSeen = -1;
+      this.lastSeenBack = -1;
+
+      this.totalElements = 7;
+
+      this.stopCalcInterval = new Array(this.totalElements).fill(false);
+      this.defaultFront = new Array(this.totalElements).fill(false);
+      this.defaultBack = new Array(this.totalElements).fill(false);
+
+      this.firstScrolling = true;
+      this.firstScrollingEnd = true;
+      this.scrolling = false;
+      this.endScrolling = false;
+      this.countEndScrolling = 0;
+      this.countEndScrollingThisSession = 0;
+      this.touchStartY = 0;
+      this.OVERSCROLL_THRESHOLD = 30;
+
+      this.changedDirection = true;
+
+      this.defaultScrolls = [];
+      this.delayEventScroll = 100;
+      this.delayFirstLoading = 100;
+      this.delayDeleteDestroyEvent = 10000;
+      this.anchorMetric = false;
+      this.leadform = new LeadForm();
+
+      Array.from(document.getElementsByTagName("a")).forEach((anchor) => {
+        anchor.addEventListener("click", () => {
+          this.handleAnchorClick();
+        });
+      });
+
+      this.createAndDefaultsElements();
+
+      let normalIndex = 0;
+      let commentIndex = 0;
+      let defaultIndex = 0;
+
+      let firstThreeComments = [
+        ...document.querySelectorAll(".commScroll"),
+      ].slice(0, 3);
+      let allObjectives = [
+        ...document.querySelectorAll(".objectiveScroll, .defaultScrollsElements"),
+        ...firstThreeComments,
+      ];
+      //find all the elements that trigger the "Scroll" target
+      allObjectives.forEach((obj) => {
+        let isNormal = obj.classList.contains("objectiveScroll");
+        let index = -1;
+        let nameObjective = "";
+        if (isNormal) {
+          index = normalIndex++;
+          nameObjective = "scroll";
+        } else {
+          let isComm = obj.classList.contains("commScroll");
+          index = isComm ? commentIndex++ : defaultIndex++;
+          nameObjective = isComm ? "comment" : "default";
+        }
+
+        //add the found element and give it an index depending on the type of element
+        this.objectivesScrollSort.push(
+          new ObjectScroll(nameObjective, obj, index)
+        );
+      });
+
+      //adding a special "leadform" element
+      //if leadform null then don`t need to add
+      if (this.leadform.initialization().length !== 0) {
+        this.objectivesScrollSort.push(
+          new ObjectScroll("leadform", this.leadform, 0)
+        );
+      }
+
+      //we sort all the found elements separately in another array, so we get an array of elements ordered by the height of the element in the page
+      this.sortElementConsideringNesting(true);
+    }
+
+    sortElementConsideringNesting(isScrollingDown) {
+      let getRect = (a, b) => {
+        let aRect, bRect;
+        if (a.nameObjective === "leadform" || b.nameObjective === "leadform") {
+          a.nameObjective === "leadform" ?
+            (aRect = a.objective.initialization().getBoundingClientRect()) :
+            (aRect = a.objective.getBoundingClientRect());
+          b.nameObjective === "leadform" ?
+            (bRect = b.objective.initialization().getBoundingClientRect()) :
+            (bRect = b.objective.getBoundingClientRect());
+        } else {
+          aRect = a.objective.getBoundingClientRect();
+          bRect = b.objective.getBoundingClientRect();
+        }
+        return {
+          aRect,
+          bRect
+        };
+      };
+      if (isScrollingDown)
+        this.objectivesScrollSort.sort((a, b) => {
+          let objects = getRect(a, b);
+          return objects.aRect.top - objects.bRect.top;
+        });
+      else
+        this.objectivesScrollSort.sort((a, b) => {
+          let objects = getRect(a, b);
+          return objects.aRect.bottom - objects.bRect.bottom;
+        });
+    }
+
+    //a function that disables the anchor metric flag
+    destroyAnchorFlag = () => {
+      let offAnchorMetric = () => {
+        this.anchorMetric = false;
+      };
+      window.addEventListener("touchmove", offAnchorMetric);
+      window.addEventListener("wheel", offAnchorMetric);
+
+      setTimeout(() => {
+        window.removeEventListener("touchmove", offAnchorMetric);
+        window.removeEventListener("wheel", offAnchorMetric);
+      }, this.delayDeleteDestroyEvent);
+    };
+
+    //a function that puts a flag on "Anchor metric"
+    handleAnchorClick() {
+      this.anchorMetric = true;
+      this.destroyAnchorFlag();
+    }
+
+    //making scrolling on the page smooth
+    setSmoothScroll() {
+      document.documentElement.style.scrollBehavior = "smooth";
+      document.body.style.scrollBehavior = "smooth";
+    }
+
+    //creating "default" elements
+    createAndDefaultsElements() {
+      for (let i = 0; i < this.totalElements; i++) {
+        let div = document.createElement("div");
+        div.classList.add("defaultScrollsElements");
+        div.style.cssText = `
+          position: absolute;
+          width: 100vw;
+          height: ${Config.debugMetric ? "10px" : "0"};
+          background-color: red;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+`;
+        document.body.appendChild(div);
+        this.defaultScrolls.push(div);
+      }
+
+      this.getPositionDefaultsElements();
+    }
+
+    //We check whether any of the elements were "by default" on the screen.
+    checkCrossDefaultElements() {
+      for (let i = 1; i < this.defaultScrolls.length; i++) {
+        if (
+          this.defaultScrolls[i].getBoundingClientRect().top <
+          window.innerHeight &&
+          this.defaultScrolls[i].getBoundingClientRect().top > 0 &&
+          !this.stopCalcInterval[i]
+        )
+          this.stopCalcInterval[i] = true;
+      }
+    }
+
+    //function for getting the coordinates of the "Default Element"
+    getPositionDefaultsElements() {
+      let screenHeight = window.innerHeight;
+      let distanceBetween = Math.floor(
+        (document.body.scrollHeight - screenHeight * 2) / (this.totalElements - 1)
+      );
+
+      //we get/update the coordinates of the "Default Element", if such an element was already on the screen, then it is not necessary to update the coordinates
+      for (let i = 0; i < this.totalElements; i++) {
+        let topPosition;
+        if (i === 0) {
+          topPosition = screenHeight * 2;
+        } else if (i === this.totalElements - 1) {
+          topPosition = document.body.scrollHeight - 50;
+        } else {
+          if (!this.stopCalcInterval[i])
+            topPosition = screenHeight * 2 + distanceBetween * i;
+        }
+        this.defaultScrolls[i].style.top = topPosition + "px";
+      }
+
+      //Checking whether the item was already on the screen
+      this.checkCrossDefaultElements();
+    }
+
+    //checking if any of the elements were skipped due to the fast scrolling of the page
+    checkForMissedItems(currentObjective, isScrollingDown, anchor) {
+      //We get the object and its index in the sorted array of objects
+      let currentSortedIndex = this.objectivesScrollSort.findIndex(
+        (obj) =>
+        obj.nameObjective === currentObjective.nameObjective &&
+        obj.index === currentObjective.index
+      );
+
+      //We place the beginning and the end of the missing indexes
+      let start = isScrollingDown ? this.lastSeen + 1 : currentSortedIndex + 1;
+      let end = isScrollingDown ? currentSortedIndex : this.lastSeen;
+      //if no items have been found yet
+      if (this.lastSeen === -1 && isScrollingDown) {
+        //then, if the page loaded at the beginning, set the index to 0, otherwise set the same index as the last element
+        this.loadPositionY < window.innerHeight * 2 ? (start = 0) : (start = end);
+      }
+      if (this.lastSeen === -1 && !isScrollingDown) end = start;
+
+      //if the length of the missing elements is more than one
+      if (Math.abs(end - start) > 0) {
+        for (let i = start; i < end; i++) {
+          const obj = this.objectivesScrollSort[i];
+          //if the missing element is not on the screen, then
+          if (!(obj.onDisplay.forward || obj.onDisplay.back)) {
+            //this is necessary to delete unnecessary messages
+            //depending on which way the scrolling is going, onDisplay = true
+            isScrollingDown
+              ?
+              (obj.onDisplay.forward = true) :
+              (obj.onDisplay.back = true);
+            //then we output these elements
+
+            Config.debugAndSend(
+              Config.getScrollName(
+                obj.nameObjective,
+                isScrollingDown ? "down" : "back",
+                anchor,
+                obj.index
+              ),
+              obj.coordinatesSend
+            );
+          }
+        }
+      }
+      this.lastSeen = isScrollingDown ? end : currentSortedIndex;
+    }
+
+    //a function that checks if there was scrolling (n>1) if it is the end of the page
+    overScroll() {
+      window.addEventListener("touchstart", (event) => {
+        this.touchStartY = event.changedTouches[0].clientY;
+      });
+      window.addEventListener("touchend", (event) => {
+        let touchEndY = event.changedTouches[0].clientY;
+        let touchDelta = this.touchStartY - touchEndY;
+
+        //if this is the end of the page
+        let isAtBottom =
+          document.documentElement.scrollHeight - window.innerHeight ===
+          window.scrollY;
+
+        //if this is the end of the page and the swipe is more than 30px
+        if (isAtBottom && Math.abs(touchDelta) > this.OVERSCROLL_THRESHOLD) {
+          this.countEndScrolling++;
+          // and this is the second such swipe
+          if (this.countEndScrolling > 1) {
+            this.countEndScrollingThisSession++;
+            Config.debugAndSend(
+              Config.metric.overScroll,
+              this.countEndScrollingThisSession
+            );
+          }
+        }
+        if (touchDelta < 0) this.countEndScrolling = 0;
+      });
+    }
+
+    getMetric() {
+      //we are waiting for the page to load and 100ms for insurance
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          this.setSmoothScroll();
+          window.addEventListener("scroll", () => {
+            //if scrolling is allowed, then we do all the calculations
+            if (this.scrolling) {
+              if (!this.scrolled && !this.anchorMetric) {
+                Config.debugAndSend(Config.metric.nameScrolled, Config.SEND_TRUE);
+                this.scrolled = true;
+                Config.eventTrigger.event2 = true;
+                Config.setDataTracker("event2",true);
+              }
+              if (this.firstScrolling) {
+                this.firstScrolling = false;
+                this.loadPositionY = window.scrollY;
+                this.endPos = window.scrollY;
+              }
+              this.getPositionDefaultsElements();
+              let currentScrollPos = window.scrollY;
+
+              //check which way the scrolling is going
+              const isScrollingDown = currentScrollPos > this.endPos;
+              if (this.changedDirection !== isScrollingDown)
+                this.sortElementConsideringNesting(isScrollingDown);
+
+              if (currentScrollPos - this.endPos !== 0) {
+                this.objectivesScrollSort.forEach((obj) => {
+                  if (!this.scrolled) { //additional verification for sendIndication
+                    Config.debugAndSend(Config.metric.nameScrolled, Config.SEND_TRUE);
+                    this.scrolled = true;
+                    Config.eventTrigger.event2 = true;
+                    Config.setDataTracker("event2",true);
+                  }
+                  let wasVisible = obj.onDisplay.forward || obj.onDisplay.back;
+                  //if it's a "leadform" and it's on the screen, then stop the "Anchor" metric
+                  if (obj.nameObjective === "leadform" && wasVisible)
+                    this.anchorMetric = false;
+                  // console.log(obj);
+                  obj.checkObjectOnDisplay(isScrollingDown, this.anchorMetric);
+
+                  //if this element was not on the screen before, but now it has appeared
+                  if (
+                    (obj.onDisplay.forward || obj.onDisplay.back) &&
+                    !wasVisible
+                  ) {
+                    this.checkForMissedItems(
+                      obj,
+                      isScrollingDown,
+                      this.anchorMetric
+                    );
+                  }
+                });
+                this.changedDirection = isScrollingDown;
+              }
+              this.endPos = currentScrollPos;
+            }
+            this.scrolling = false;
+          });
+
+          window.addEventListener("scrollend", () => {
+            if (this.firstScrollingEnd) {
+              // Config.debugAndSend(Config.metric.nameScrolled, window.scrollY);
+              this.firstScrollingEnd = false;
+            }
+            //if the "Anchor" metric is enabled
+            if (this.anchorMetric) {
+              let leadform = this.leadform.getLeadForm();
+              if (this.leadform.initialization().length !== 0) {
+                let isNotVisible = !leadform.getBoundingClientRect().top < window.innerHeight &&
+                  leadform.getBoundingClientRect().bottom > 0;
+
+                //and there is no "leadform" on the screen
+                if (isNotVisible) {
+                  Config.debugMetric && console.log("yet scroll");
+                  if (leadform.nameObjective) {
+                    leadform.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    });
+                  } else window.scrollBy(0, leadform.getBoundingClientRect().top);
+                  this.destroyAnchorFlag();
+                }
+              }
+            }
+          });
+        }, this.delayFirstLoading);
+      });
+
+      this.overScroll();
+
+      //replacing the calculation in debounce with the calculation once in delayEventScroll
+      setInterval(() => {
+        this.scrolling = true;
+      }, this.delayEventScroll);
+    }
+  }
+</script><script>
+  //metric 2.0
+
+  class Metric {
+
+    other = new OtherMetric();
+    interactiveClick = new InteractiveClick();
+    form = new FormMetric();
+    scroll = new NewScrollMetrica();
+    time = new TimerMetric();
+    
+    getMetric() {
+      if (!Config.sendMetric) {
+        console.log("отправка метрики выключена");
+      }
+      if (Config.debugMetric) {
+        console.log("Список целей:");
+        console.log(Config.metric);
+      }
+      this.other.getMetric();
+      this.interactiveClick.getMetric();
+      this.form.getMetric();
+      this.scroll.initialization();
+      this.scroll.getMetric();
+      this.time.getMetric();
+    }
+  }
+
+  let c = new Config();
+  c.getHeaderConfig();
+  let m = new Metric();
+  m.getMetric();
+</script><!-- END body:end -->  
+
+</body></html>

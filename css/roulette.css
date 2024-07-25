@@ -1,0 +1,114 @@
+.wheel-img {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wheel-img__numbers {
+    position: absolute;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.order_info {
+    text-align: center;
+}
+
+#counter_product {
+    font-size: 25px;
+    line-height: 1.2;
+    margin: 15px 0;
+    color: red;
+}
+
+.left_count {
+    background: red none repeat scroll 0 0;
+    padding: 23px;
+    margin: 15px auto;
+    width: 220px;
+    color: #fff;
+    text-shadow: 0 -1px 0 #000, 0 -1px 0 #000, 0 1px 0 #000, 0 1px 0 #000, -1px 0 0 #000, 1px 0 0 #000, -1px 0 0 #000, 1px 0 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+        -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 32px !important;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 576px) {
+    .close-popup {
+        right: 0 !important;
+    }
+}
+
+@-webkit-keyframes super-rotation {
+    70% {
+        -webkit-transform: rotate(1519deg);
+        transform: rotate(1519deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(1510deg);
+        transform: rotate(1510deg);
+    }
+}
+
+@keyframes super-rotation {
+    70% {
+        -webkit-transform: rotate(1519deg);
+        transform: rotate(1519deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(1510deg);
+        transform: rotate(1510deg);
+    }
+}
+
+.super-rotation {
+    -webkit-animation-name: super-rotation;
+    animation-name: super-rotation;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.wheel-cursor {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.order_form_row {
+    position: relative;
+}
+
+.hint-input {
+    position: absolute;
+    color: #fff;
+    border: 1px dashed #000;
+    border-radius: 7px;
+    z-index: 1000;
+    left: 0;
+    top: -20px;
+    background-color: rgb(231, 76, 60);
+    padding: 5px;
+    display: none;
+}
+
+.order_form_row input:focus+.hint-input {
+    display: block;
+}
